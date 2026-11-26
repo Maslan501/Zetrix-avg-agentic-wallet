@@ -1,38 +1,61 @@
-# SUMMARY
+---
+description: >-
+  Agent Verification Gateway (AVG): verify that an AI agent belongs to a real,
+  verified owner before you serve it.
+---
 
-* [Overview](./)
-* [Getting Started](/broken/pages/87eb11de063f5dfcf1fb62372ac1c7693238bdd2)
-  * [Architecture](/broken/pages/2bd3744c13663b0cf208a1e68fab03b90fa9264b)
-  * [End-to-End Flow](/broken/pages/73eb7e39d5acfa6462e4a53de1a51911fb024f3b)
-  * [Service Integration Quickstart](/broken/pages/81284f65760783f645229458b682d8354e64fe90)
-* [API Specification](/broken/pages/17536d452e51a148c2c80e6adff82fd057754a8e)
-  * [Authentication](/broken/pages/415d412e3a3e9579e2957d0d3570b4684aa0d385)
-  * [Standard Response Format](/broken/pages/f39457d18750c2c36ec5e481eb9d11fafc744589)
-  * [Proof Request](/broken/pages/345a949b4c46831b94aff1ff24a4ab9788759f1d)
-  * [Verifiable Presentation Submission](/broken/pages/ce31ed8c59dbc9a22ad3b886830dd5c3ecf7d728)
-  * [Signed Verification Result](/broken/pages/a7e1d521910b438d4d564c12c15b744c1457043f)
-  * [Verification Logs](/broken/pages/4852c37944f6af593b3fc94d12f9d6b7c1e7f588)
-  * [Result and Error Codes](/broken/pages/320af927c5f37cbe568d0c36cefb4f5c79474f2d)
-* [Agent Wallet](/broken/pages/91673772cbd12d4da622ef0d3fd7f63f40530ebd)
-  * [Apply for Verified Agent Cert](/broken/pages/0c0c208f62e6783abcebeacab14dd3fce82822d4)
-  * [Discover Services](/broken/pages/f46afe1ab886134d8ff4e08a0446e2296fee99cd)
-  * [Respond to Proof Request](/broken/pages/efeffd61110368daf9e4e76b59f776f0bfc7ac4b)
-* [Admin Portal](admin-portal/)
-  * [Roles and Permissions](admin-portal/roles-and-permissions.md)
-  * [Login and Account Security](admin-portal/login-and-account-security.md)
-  * [Client Accounts](admin-portal/client-accounts.md)
-  * [User Management](/broken/pages/3233beb9e544f84165117b823a95f3a4455fc4df)
-  * [Service Onboarding Application](/broken/pages/0ab354ba17a7644bc7c59c87b42b0c3ac095bf61)
-  * [Approve or Reject Application](admin-portal/approve-or-reject-application.md)
-  * [API Keys and Signing Secret](admin-portal/api-keys-and-signing-secret.md)
-  * [Suspend, Reactivate or Delist](/broken/pages/dcbd23fa19bb07a31ea0c305ae13ccecb221aef8)
-  * [Services and Verification Logs](/broken/pages/1158eb3bc0e113501d0f12ed6a34b25c4fd57e76)
-  * [Audit Trail](admin-portal/audit-trail.md)
-* [Registry and Service Cert](/broken/pages/a4e7bad408a4bd561531bd7f648e659c1ff6b350)
-  * [Zetrix Registry and OpenAgenet Mirror](/broken/pages/4de4253cf677d2b23dff6260678fef011e6e6f8b)
-  * [Service Cert](/broken/pages/c2aa804e807eaa1a341a6b2ad7d7f9accc8f0eec)
-* [AVG VC Templates](vc-templates.md)
-* [Reference](/broken/pages/4208d6ae6bd6d7ff0c92f15d8a91ebde1581646e)
-  * [Glossary](/broken/pages/832c9c89d15ba83be83bb1384fa2fa473505adfd)
-  * [Non-Functional Requirements](/broken/pages/2a6a9f211d1a875869743a2e876612a48687945b)
-  * [Email Notifications](/broken/pages/87615089cb43bbd3a3f9a8e3333e115176482ba3)
+# Overview
+
+The Zetrix Agent Verification Gateway (AVG) is a secure, client-facing verification service that lets websites, APIs, agents and MCP servers confirm the identity of an AI agent before serving it. An agent proves who it is by presenting its **Agent Cert**, a Verifiable Credential (VC) issued by Zetrix through the Malaysia Blockchain Infrastructure VC Service (MBI). AVG checks that proof against the Zetrix chain and returns a signed result the service can trust.
+
+AVG is part of the **Agentic Zetrix Wallet** programme. Phase 1 covers agent identity through the existing ZVG / MyDigital ID owner check, service verification through AVG, and service onboarding by registry controllers through a new Admin Portal. Approved services are listed in the Zetrix registry and mirrored on OpenAgenet.
+
+{% hint style="info" %}
+This documentation is based on PRD\_AZW\_26001 *Phase 1 Agent Identity and Service Verification* v1.3.1 (20 November 2026). Endpoint paths, header names and JSON field names marked as **proposed** must be confirmed with the AVG development team before integration.
+{% endhint %}
+
+## **Functional Scope**
+
+AVG and its supporting components provide the following functions:
+
+| Function | Description |
+| --- | --- |
+| Create Proof Request | A service asks AVG, using its API key, for a single-use OID4VP proof request with an x401 challenge. |
+| Verify Agent VP | AVG verifies the agent's Verifiable Presentation (VP) itself, using issuer keys and VC status on the Zetrix chain. |
+| Signed Result Delivery | AVG returns an HMAC-signed result to the agent (forwarded in the x401 header) and posts the same result to the service's callback URL. |
+| Verification Logs | Every proof request and verification is logged for 30 days, without claim values. |
+| Service Onboarding | Registry controllers onboard, approve, suspend and delist services through the Admin Portal (maker / checker). |
+| Service Discovery | Agents search the Zetrix registry for approved services and see up front which credential and claims each one asks for. |
+| Service Cert | Each approved service receives a did:zid Service Cert naming the registry controller that approved it. |
+
+## **Role in the ZID Ecosystem**
+
+* **Trust Gateway:** Sits between services and agents, so services never integrate with MBI or register as an MBI verifier for each VC template.
+* **OID4VP Verifier:** Verifies agent VPs directly against the Zetrix chain. MBI only creates the VP; it is not part of the check.
+* **Privacy Layer:** Services receive only the claims they were approved for, and only after the owner consents to personal claims.
+* **Registry Anchor:** Only services approved through the Admin Portal can create proof requests and appear in the Zetrix registry.
+
+## **Benefits**
+
+* **One Integration:** A service integrates once with AVG over REST using an API key, regardless of which Agent Cert template is presented.
+* **Replay Protection:** Every proof request carries a one-time challenge (at least 128-bit nonce), expires after 5 minutes and works once.
+* **Tamper-Evident Results:** Results are HMAC-signed with the service's own secret, so an agent cannot change a result without breaking the signature.
+* **Fail Closed:** AVG never returns `true` unless every check passes and the Zetrix chain was readable.
+* **Data Minimisation:** Logs never hold claim values, holder DIDs are masked, and personal claims need written justification at onboarding (PDPA 2010).
+
+## **Who Should Read This**
+
+| Audience | Start here |
+| --- | --- |
+| Service developers integrating AVG | [Service Integration Quickstart](getting-started/integration-quickstart.md), [API Specification](api-specification/README.md) |
+| Agent wallet developers | [Agent Wallet](agent-wallet/README.md) |
+| Registry controller staff (telcos) | [Admin Portal](admin-portal/README.md) |
+| Zetrix operations | [Admin Portal](admin-portal/README.md), [Registry and Service Cert](registry/README.md) |
+
+## **Phase 1 Scope Notes**
+
+* Owner identity check is the existing ZVG / MyDigital ID flow only. Owners without MyDigital ID get a Basic Agent Cert only.
+* AVG verifies Zetrix-issued credentials only. CAICT-issued credentials are not supported.
+* Agent Cert issuance and service checks are free in Phase 1.
+* A `true` result proves agent identity only. It does not authorise any action; that remains the service's decision.
+* Pilot registry controllers are telcos (Omantel, Airtel Africa).

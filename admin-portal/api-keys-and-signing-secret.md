@@ -1,53 +1,47 @@
-# api keys and signing secret
+# API Keys and Signing Secret
 
-The API key identifies which service is calling AVG. The signing secret lets the service verify AVG's results. Both can be replaced without downtime and blocked in an emergency.
+The API key is how AVG knows which service is calling; the signing secret is how the service checks AVG's results. Both must be replaceable without downtime and blockable in an emergency.
 
-## Who
+## **Who**
 
-* Checker and Client Admin for their own company's services
-* Super Admin for any service
+Checker and Client Admin for their own company's services. Super Admin for any service.
 
-## Key List
+## **Key List**
 
-Shows:
+Shows key ID, prefix and last 4 characters, status (`Active` / `Expiring` / `Revoked`), created date, created by and last used time.
 
-* Key ID
-* Prefix and last 4 characters
-* Status: `Active`, `Expiring`, or `Revoked`
-* Created date
-* Created by
-* Last used time
+## **Actions**
 
-## Actions
+| Action | Effect |
+| --- | --- |
+| Rotate key | Creates a new key (shown once) and sets the old key to `Expiring`. The expiring key works for 24 hours, then is revoked automatically. |
+| Revoke key | Stops the key at once; AVG rejects it within 60 seconds. Reason mandatory. |
+| Rotate secret | Creates a new secret (shown once). AVG signs with the new one; the old one stays valid for 24 hours. |
+| Revoke secret | Stops the secret at once. |
 
-| Action        | Effect                                                                                                                                 |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| Rotate key    | Creates a new key, shown once, and sets the old key to `Expiring`. The expiring key works for 24 hours, then is revoked automatically. |
-| Revoke key    | Stops the key at once; AVG rejects it within 60 seconds. A reason is mandatory.                                                        |
-| Rotate secret | Creates a new secret, shown once. AVG signs with the new secret; the old secret stays valid for 24 hours.                              |
-| Revoke secret | Stops the secret at once.                                                                                                              |
+## **Rules**
 
-## Rules
+| Rule | Detail |
+| --- | --- |
+| Maximum keys | 2 non-revoked keys per service. |
+| Last key | Revoking the only active key shows a warning that the service will stop working until a new key is created; revoked only after confirmation. |
+| Storage | Only a hash of the key is stored. Full key never logged or shown again. |
+| No fresh 2FA | Rotating or revoking does not ask for an extra authenticator code. |
 
-| Rule         | Detail                                                                                                                                                  |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Maximum keys | 2 non-revoked keys per service.                                                                                                                         |
-| Last key     | Revoking the only active key shows a warning that the service will stop working until a new key is created. The key is revoked only after confirmation. |
-| Storage      | Only a hash of the key is stored. The full key is never logged or shown again.                                                                          |
-| No fresh 2FA | Rotating or revoking does not ask for an extra authenticator code.                                                                                      |
+## **Field Validation**
 
-## Field Validation
+| Field | Description | Min | Max | Mandatory |
+| --- | --- | --- | --- | --- |
+| Action | Rotate / Revoke. | — | — | Yes |
+| Revocation Reason | Mandatory for Revoke. No emojis. | 10 | 500 | No |
+| Key ID / Prefix / Status / Last Used | Read-only. | — | — | Yes |
 
-| Field                                | Description                      | Min | Max | Mandatory |
-| ------------------------------------ | -------------------------------- | --- | --- | --------- |
-| Action                               | Rotate / Revoke.                 | —   | —   | Yes       |
-| Revocation Reason                    | Mandatory for Revoke. No emojis. | 10  | 500 | No        |
-| Key ID / Prefix / Status / Last Used | Read-only.                       | —   | —   | Yes       |
+## **Messages**
 
-## Messages
+| Situation | Message |
+| --- | --- |
+| Maximum keys reached | "Revoke the expiring key before rotating again." |
 
-{% hint style="warning" %}
-**Maximum keys reached:** "Revoke the expiring key before rotating again."
-{% endhint %}
+**Sequence Diagram**
 
-## Sequence Diagram
+<figure><img src="../.gitbook/assets/seq-api-keys.png" alt="Manage service API keys"><figcaption><p>Manage service API keys and signing secret</p></figcaption></figure>
