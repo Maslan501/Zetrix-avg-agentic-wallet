@@ -1,0 +1,21 @@
+title AVG-10 Read AVG Verification Logs · PRD 2.9 · US-10
+participant Portal_User
+participant Admin_Portal_Backend
+participant AVG_Log_Store
+participant Service
+==PORTAL VIEW==
+Portal_User->Admin_Portal_Backend:open verification log (last 30 days; service, result, reason filters)
+Admin_Portal_Backend->Admin_Portal_Backend:check role + organisation scope
+Admin_Portal_Backend->AVG_Log_Store:query
+AVG_Log_Store-->Admin_Portal_Backend:entries (claim names only, never values)
+Admin_Portal_Backend->Admin_Portal_Backend:mask holder DID (first 12 + last 4)
+Admin_Portal_Backend-->Portal_User:log entries, 20 per page, newest first
+==SERVICE LOG API==
+Service->AVG_Log_Store:GET verification logs (API key)
+AVG_Log_Store-->Service:own entries only, last 30 days
+alt OTHER COMPANY SERVICE
+Admin_Portal_Backend-->Portal_User:403, attempt logged
+end
+alt ENTRY OLDER THAN 30 DAYS
+AVG_Log_Store->AVG_Log_Store:daily clean-up deletes it
+end

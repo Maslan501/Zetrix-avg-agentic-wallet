@@ -53,6 +53,6 @@ Same approval rules. On approval, AVG registration and the Zetrix listing are up
 
 **Sequence Diagram**
 
-<figure><img src="../.gitbook/assets/seq-approve-application.png" alt="Approve or reject service application"><figcaption><p>Approve or reject service application</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/avg-04-approve-register.svg" alt="Approve or reject service application"><figcaption><p>Approve or reject service application</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/flow-us-07.png" alt="Approval process flow"><figcaption><p>Process flow: approve or reject</p></figcaption></figure>

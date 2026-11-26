@@ -52,6 +52,6 @@ The OpenAgenet Registrar API, format and approval steps, Zetrix's routing code, 
 
 **Sequence Diagram**
 
-<figure><img src="../.gitbook/assets/seq-registry-sync.png" alt="Publish service listing and mirror to OpenAgenet"><figcaption><p>Publish service listing in Zetrix registry and mirror to OpenAgenet</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/avg-08-registry-sync.svg" alt="Publish service listing and mirror to OpenAgenet"><figcaption><p>Publish service listing in Zetrix registry and mirror to OpenAgenet</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/flow-us-16.png" alt="Registry sync process flow"><figcaption><p>Process flow: registry listing and mirror</p></figcaption></figure>

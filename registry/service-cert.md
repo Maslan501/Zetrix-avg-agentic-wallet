@@ -41,6 +41,6 @@ Agents verifying a service's Service Cert is **not** in Phase 1.
 
 **Sequence Diagram**
 
-<figure><img src="../.gitbook/assets/seq-service-cert.png" alt="Issue and revoke Service Cert"><figcaption><p>Issue and revoke Service Cert for approved services</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/avg-09-service-cert.svg" alt="Issue and revoke Service Cert"><figcaption><p>Issue and revoke Service Cert for approved services</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/flow-us-17.png" alt="Service Cert process flow"><figcaption><p>Process flow: Service Cert</p></figcaption></figure>

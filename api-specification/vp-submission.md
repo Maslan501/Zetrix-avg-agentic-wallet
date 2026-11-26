@@ -129,6 +129,6 @@ The `data` object is the **signed result**. See [Signed Verification Result](sig
 
 **Sequence Diagram**
 
-<figure><img src="../.gitbook/assets/seq-verify-vp.png" alt="AVG verifies agent VP and delivers a signed result"><figcaption><p>AVG verifies agent VP (OID4VP) and delivers a signed result</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/avg-03-verify-vp.svg" alt="AVG verifies agent VP and delivers a signed result"><figcaption><p>AVG verifies agent VP (OID4VP) and delivers a signed result</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/flow-us-13.png" alt="Process flow for VP verification"><figcaption><p>Process flow: AVG verifies agent VP</p></figcaption></figure>

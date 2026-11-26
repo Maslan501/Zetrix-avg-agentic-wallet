@@ -1,0 +1,35 @@
+title AVG-04 Approve Application and Register Service in AVG · PRD 2.6 · US-07
+participant Checker_or_Client_Admin
+participant Admin_Portal_Backend
+participant DNS_Resolver
+participant AVG
+participant Zetrix_HSM
+participant SSIVC
+participant MBI
+participant Zetrix_Registry
+==REVIEW==
+Checker_or_Client_Admin->Admin_Portal_Backend:approve application
+Admin_Portal_Backend->Admin_Portal_Backend:approver is not creator or last editor
+Admin_Portal_Backend->DNS_Resolver:re-check DNS TXT record
+DNS_Resolver-->Admin_Portal_Backend:found
+==GO LIVE==
+Admin_Portal_Backend->Admin_Portal_Backend:create Service record Active
+Admin_Portal_Backend->AVG:register service (required credential, allowed claims, callback URL)
+AVG-->Admin_Portal_Backend:API key + HMAC signing secret (key hashed, secret encrypted)
+Admin_Portal_Backend->Zetrix_HSM:create service did:zid and did:oan key pairs
+Zetrix_HSM-->Admin_Portal_Backend:public keys (private keys stay in HSM)
+Admin_Portal_Backend->SSIVC:issue Service Cert (service did:zid, approver = registry controller)
+SSIVC->MBI:issue VC with Service Cert template
+MBI-->SSIVC:Service Cert ID, validUntil
+SSIVC-->Admin_Portal_Backend:Service Cert ID, validUntil
+Admin_Portal_Backend-->Zetrix_Registry:create listing + OpenAgenet mirror (async, AVG-08)
+Admin_Portal_Backend-->Checker_or_Client_Admin:approved; API key + signing secret shown once
+alt SELF-APPROVAL OR TXT RECORD MISSING
+Admin_Portal_Backend-->Checker_or_Client_Admin:approval blocked
+end
+alt SERVICE CERT ISSUE FAILS
+Admin_Portal_Backend->Admin_Portal_Backend:service stays Active in AVG; cert issue failed, Retry
+end
+alt REGISTRY SYNC FAILS
+Admin_Portal_Backend->Admin_Portal_Backend:service stays Active in AVG; listing sync failed, Retry
+end

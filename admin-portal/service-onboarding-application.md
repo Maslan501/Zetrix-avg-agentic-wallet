@@ -111,4 +111,4 @@ A Maker or Client Admin of the same company can submit an update to an Active se
 
 <figure><img src="../.gitbook/assets/seq-submit-application.png" alt="Submit service onboarding application"><figcaption><p>Submit service onboarding application</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/seq-update-live-service.png" alt="Update a live service"><figcaption><p>Update a live service</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/avg-05-update-live-service.svg" alt="Update a live service"><figcaption><p>Update a live service</p></figcaption></figure>

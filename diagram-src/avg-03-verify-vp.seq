@@ -1,0 +1,36 @@
+title AVG-03 AVG Verifies VP (OID4VP) and Delivers Signed Result · PRD 2.11 · US-13
+participant Calling_Agent
+participant MBI
+participant AVG
+participant Zetrix_Chain
+participant Service
+==STEPS 6 TO 7A==
+Calling_Agent->MBI:6. create VP (revealed claims, signed over x401 challenge)
+MBI-->Calling_Agent:VP
+Calling_Agent->AVG:7. submit VP (OID4VP, proofRequestId)
+AVG->AVG:proof request exists, not expired, not used; mark used
+AVG->Zetrix_Chain:7a. read issuer key + VC status
+Zetrix_Chain-->AVG:issuer key, status
+AVG->AVG:check in order: (1) challenge + signature (2) Zetrix issuer from AVG config (3) not revoked (4) not expired (5) credential type (6) requested claims present
+==STEPS 8A TO 8C==
+AVG->AVG:sign result with service HMAC secret; log attempt (no claim values, 30 days)
+AVG-->Calling_Agent:8a. signed result (true + disclosed claims)
+Calling_Agent->Service:8b. forward signed result in x401 header
+Service->Service:recompute HMAC with own secret; match proofRequestId
+Service-->Calling_Agent:serve the call
+AVG-->Service:8c. POST same signed result to callback URL (always)
+Service->Service:check HMAC; treat header + callback for same proofRequestId as one result
+alt ANY CHECK FAILS
+AVG-->Calling_Agent:8a. signed result (false + reason code)
+Calling_Agent->Service:8b. forward
+Service-->Calling_Agent:refuse, with reason
+end
+alt RESULT TAMPERED
+Service-->Calling_Agent:refuse (HMAC_MISMATCH)
+end
+alt ZETRIX CHAIN UNREADABLE (FAIL CLOSED)
+AVG-->Calling_Agent:signed result (false, VERIFIER_UNAVAILABLE)
+end
+alt CALLBACK NOT ANSWERED (NO 2XX IN 5 S)
+AVG->AVG:retry after 5 s, 30 s, 2 min, then log CALLBACK_FAILED
+end

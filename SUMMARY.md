@@ -6,6 +6,7 @@
 * [Getting Started](getting-started/README.md)
   * [Architecture](getting-started/architecture.md)
   * [End-to-End Flow](getting-started/end-to-end-flow.md)
+  * [AVG Flows](getting-started/avg-flows.md)
   * [Service Integration Quickstart](getting-started/integration-quickstart.md)
 * [API Specification](api-specification/README.md)
   * [Authentication](api-specification/authentication.md)

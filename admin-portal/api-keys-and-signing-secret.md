@@ -44,4 +44,4 @@ Shows key ID, prefix and last 4 characters, status (`Active` / `Expiring` / `Rev
 
 **Sequence Diagram**
 
-<figure><img src="../.gitbook/assets/seq-api-keys.png" alt="Manage service API keys"><figcaption><p>Manage service API keys and signing secret</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/avg-06-api-keys-secret.svg" alt="Manage service API keys"><figcaption><p>Manage service API keys and signing secret</p></figcaption></figure>

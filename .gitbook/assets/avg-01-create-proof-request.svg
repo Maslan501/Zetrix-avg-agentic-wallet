@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="984" height="1102" viewBox="0 0 984 1102" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1f2937"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<line x1="98.85" y1="114" x2="98.85" y2="1034" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/><line x1="398.85" y1="114" x2="398.85" y2="1034" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/><line x1="698.85" y1="114" x2="698.85" y2="1034" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/>
+<rect x="26" y="931" width="932" height="79" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+<rect x="26" y="816" width="932" height="95" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+<rect x="26" y="717" width="932" height="79" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+<rect x="26" y="618" width="932" height="79" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+<line x1="20" y1="150" x2="964" y2="150" stroke="#4f46e5" stroke-width="1.2" stroke-dasharray="2 3"/><rect x="433.6" y="137" width="116.80000000000001" height="26" rx="13" fill="#4f46e5"/><text x="492" y="155" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">STEPS 3 TO 5</text>
+<text x="248.85000000000002" y="184" font-size="13" text-anchor="middle" fill="#1f2937">3. call service (API / MCP / A2A)</text>
+<line x1="98.85" y1="193" x2="395.85" y2="193" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="548.85" y="225" font-size="13" text-anchor="middle" fill="#1f2937">4. create proof request (API key,</text>
+<text x="548.85" y="241" font-size="13" text-anchor="middle" fill="#1f2937">required credential, requested claims,</text>
+<text x="548.85" y="257" font-size="13" text-anchor="middle" fill="#1f2937">service reference)</text>
+<line x1="398.85" y1="266" x2="695.85" y2="266" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="736.85" y="302" font-size="13" fill="#1f2937">check API key valid, service Active,</text>
+<text x="736.85" y="318" font-size="13" fill="#1f2937">rate limit (60/min), claims within</text>
+<text x="736.85" y="334" font-size="13" fill="#1f2937">Allowed Claims, credential not</text>
+<text x="736.85" y="350" font-size="13" fill="#1f2937">broader than onboarded</text>
+<path d="M698.85 292 h28 v70 h-24" fill="none" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="736.85" y="394" font-size="13" fill="#1f2937">create proofRequestId + x401</text>
+<text x="736.85" y="410" font-size="13" fill="#1f2937">challenge (nonce &gt;= 128-bit, 5 min,</text>
+<text x="736.85" y="426" font-size="13" fill="#1f2937">single use); add service name +</text>
+<text x="736.85" y="442" font-size="13" fill="#1f2937">did:zid, template IDs and issuer</text>
+<text x="736.85" y="458" font-size="13" fill="#1f2937">from AVG config, verifier ID, submit</text>
+<text x="736.85" y="474" font-size="13" fill="#1f2937">URL; store it</text>
+<path d="M698.85 384 h28 v102 h-24" fill="none" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="548.85" y="514" font-size="13" text-anchor="middle" fill="#1f2937">OID4VP proof request (not signed in</text>
+<text x="548.85" y="530" font-size="13" text-anchor="middle" fill="#1f2937">Phase 1)</text>
+<line x1="698.85" y1="539" x2="401.85" y2="539" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<text x="248.85000000000002" y="571" font-size="13" text-anchor="middle" fill="#1f2937">5. proof request, passed unchanged</text>
+<line x1="398.85" y1="580" x2="101.85" y2="580" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<text x="548.85" y="652" font-size="13" text-anchor="middle" fill="#1f2937">401 INVALID_API_KEY</text>
+<line x1="698.85" y1="661" x2="401.85" y2="661" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<path d="M26 618 h44 v14 l-8 8 h-36 z" fill="#94a3b8"/><text x="34" y="634" font-size="12" font-weight="700" fill="#ffffff">alt</text><text x="80" y="634" font-size="12" font-weight="700" fill="#1f2937">[INVALID OR REVOKED API KEY]</text>
+<text x="548.85" y="751" font-size="13" text-anchor="middle" fill="#1f2937">403 SERVICE_SUSPENDED</text>
+<line x1="698.85" y1="760" x2="401.85" y2="760" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<path d="M26 717 h44 v14 l-8 8 h-36 z" fill="#94a3b8"/><text x="34" y="733" font-size="12" font-weight="700" fill="#ffffff">alt</text><text x="80" y="733" font-size="12" font-weight="700" fill="#1f2937">[SERVICE SUSPENDED OR DELISTED]</text>
+<text x="548.85" y="850" font-size="13" text-anchor="middle" fill="#1f2937">400 CLAIMS_NOT_ALLOWED /</text>
+<text x="548.85" y="866" font-size="13" text-anchor="middle" fill="#1f2937">CREDENTIAL_REQUIREMENT_TOO_LOW</text>
+<line x1="698.85" y1="875" x2="401.85" y2="875" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<path d="M26 816 h44 v14 l-8 8 h-36 z" fill="#94a3b8"/><text x="34" y="832" font-size="12" font-weight="700" fill="#ffffff">alt</text><text x="80" y="832" font-size="12" font-weight="700" fill="#1f2937">[CLAIMS OUTSIDE ALLOWED LIST OR CREDENTIAL TOO BROAD]</text>
+<text x="548.85" y="965" font-size="13" text-anchor="middle" fill="#1f2937">429 RATE_LIMITED + Retry-After</text>
+<line x1="698.85" y1="974" x2="401.85" y2="974" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<path d="M26 931 h44 v14 l-8 8 h-36 z" fill="#94a3b8"/><text x="34" y="947" font-size="12" font-weight="700" fill="#ffffff">alt</text><text x="80" y="947" font-size="12" font-weight="700" fill="#1f2937">[OVER RATE LIMIT]</text>
+<text x="40" y="44" font-size="18" font-weight="700" fill="#1f2937">AVG-01 Create Proof Request (x401 Challenge) · PRD 2.10 · US-12</text>
+<rect x="39.99999999999999" y="76" width="117.7" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="98.85" y="100" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">Calling Agent</text><rect x="343.85" y="76" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="398.85" y="100" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">Service</text><rect x="643.85" y="76" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="698.85" y="100" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">AVG</text>
+<rect x="39.99999999999999" y="1034" width="117.7" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="98.85" y="1058" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">Calling Agent</text><rect x="343.85" y="1034" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="398.85" y="1058" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">Service</text><rect x="643.85" y="1034" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="698.85" y="1058" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">AVG</text>
+</svg>

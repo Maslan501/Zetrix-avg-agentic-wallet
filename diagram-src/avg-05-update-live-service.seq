@@ -1,0 +1,38 @@
+title AVG-05 Update a Live Service in AVG · PRD 2.5 BR-11, 2.6 BR-10 · US-06U
+participant Maker_or_Client_Admin
+participant Admin_Portal_Backend
+participant DNS_Resolver
+participant Checker_or_Client_Admin
+participant AVG
+participant SSIVC
+participant MBI
+participant Zetrix_HSM
+participant Zetrix_Registry
+participant OpenAgenet
+==SUBMIT UPDATE==
+Maker_or_Client_Admin->Admin_Portal_Backend:submit update (changed fields, higher version)
+Admin_Portal_Backend->Admin_Portal_Backend:validate fields; version > current; type unchanged; no other pending update
+alt ENDPOINT DOMAIN CHANGED
+Admin_Portal_Backend->DNS_Resolver:check TXT record on new domain
+DNS_Resolver-->Admin_Portal_Backend:found
+end
+Admin_Portal_Backend-->Maker_or_Client_Admin:update pending approval; service keeps running on current details
+==APPROVE UPDATE==
+Checker_or_Client_Admin->Admin_Portal_Backend:approve update
+Admin_Portal_Backend->Admin_Portal_Backend:approver is not submitter
+Admin_Portal_Backend->AVG:update registration (credential, claims, callback)
+AVG-->Admin_Portal_Backend:ok (API key, secret, did:zid, did:oan unchanged)
+alt SERVICE NAME OR ENDPOINT DOMAIN CHANGED
+Admin_Portal_Backend->SSIVC:issue new Service Cert, revoke old
+SSIVC->MBI:issue new VC, revoke old VC
+MBI-->SSIVC:new Service Cert ID
+SSIVC-->Admin_Portal_Backend:new Service Cert ID
+end
+Admin_Portal_Backend->Zetrix_Registry:update listing (new version)
+Admin_Portal_Backend->Zetrix_HSM:sign new DID document version with did:oan key
+Zetrix_HSM-->Admin_Portal_Backend:proof
+Admin_Portal_Backend->OpenAgenet:submit new package version (async, retry)
+Admin_Portal_Backend-->Checker_or_Client_Admin:update live
+alt UPDATE REJECTED
+Admin_Portal_Backend-->Maker_or_Client_Admin:rejected with reason; service unchanged
+end

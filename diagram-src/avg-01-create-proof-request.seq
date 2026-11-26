@@ -1,0 +1,23 @@
+title AVG-01 Create Proof Request (x401 Challenge) · PRD 2.10 · US-12
+participant Calling_Agent
+participant Service
+participant AVG
+==STEPS 3 TO 5==
+Calling_Agent->Service:3. call service (API / MCP / A2A)
+Service->AVG:4. create proof request (API key, required credential, requested claims, service reference)
+AVG->AVG:check API key valid, service Active, rate limit (60/min), claims within Allowed Claims, credential not broader than onboarded
+AVG->AVG:create proofRequestId + x401 challenge (nonce >= 128-bit, 5 min, single use); add service name + did:zid, template IDs and issuer from AVG config, verifier ID, submit URL; store it
+AVG-->Service:OID4VP proof request (not signed in Phase 1)
+Service-->Calling_Agent:5. proof request, passed unchanged
+alt INVALID OR REVOKED API KEY
+AVG-->Service:401 INVALID_API_KEY
+end
+alt SERVICE SUSPENDED OR DELISTED
+AVG-->Service:403 SERVICE_SUSPENDED
+end
+alt CLAIMS OUTSIDE ALLOWED LIST OR CREDENTIAL TOO BROAD
+AVG-->Service:400 CLAIMS_NOT_ALLOWED / CREDENTIAL_REQUIREMENT_TOO_LOW
+end
+alt OVER RATE LIMIT
+AVG-->Service:429 RATE_LIMITED + Retry-After
+end

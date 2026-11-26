@@ -73,6 +73,6 @@ The consent question names the service using the name on its **Zetrix registry s
 
 **Sequence Diagram**
 
-<figure><img src="../.gitbook/assets/seq-respond-proof-request.png" alt="Respond to proof request with selective-disclosure VP"><figcaption><p>Respond to proof request with selective-disclosure VP</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/avg-02-respond-proof-request.svg" alt="Respond to proof request with selective-disclosure VP"><figcaption><p>Respond to proof request with selective-disclosure VP</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/flow-us-15.png" alt="Process flow for responding to a proof request"><figcaption><p>Process flow: respond to proof request</p></figcaption></figure>

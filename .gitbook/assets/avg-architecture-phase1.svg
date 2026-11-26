@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1220" height="1030" viewBox="0 0 1220 1030" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+    <marker id="p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4f46e5"/></marker>
+    <style>
+      .box{fill:#f1f5f9;stroke:#64748b;stroke-width:1.4}
+      .new{fill:#eef2ff;stroke:#4f46e5;stroke-width:1.8}
+      .ext{fill:#fff7ed;stroke:#c2410c;stroke-width:1.4;stroke-dasharray:5 3}
+      .t{font-size:15px;font-weight:700;fill:#0f172a;text-anchor:middle}
+      .s{font-size:12px;fill:#334155;text-anchor:middle}
+      .tag{font-size:10px;font-weight:700;letter-spacing:.5px;text-anchor:middle}
+      .ln{stroke:#334155;stroke-width:1.6;fill:none}
+      .lp{stroke:#4f46e5;stroke-width:1.6;fill:none}
+      .lbl{font-size:11.5px;fill:#334155}
+      .lblp{font-size:11.5px;fill:#4f46e5}
+      .bd{fill:#f59e0b}
+      .bt{font-size:11px;font-weight:700;fill:#1f2937;text-anchor:middle}
+      .h{font-size:14px;font-weight:700;fill:#0f172a}
+      .lg{font-size:12px;fill:#334155}
+      .lgp{font-size:12px;fill:#4f46e5}
+    </style>
+  </defs>
+  <rect width="1220" height="1030" fill="#ffffff"/>
+  <text x="40" y="20" font-size="0">Agentic Zetrix Wallet Phase 1 architecture</text>
+
+  <!-- ===== connectors (drawn first) ===== -->
+  <!-- ZVG -> SSIVC -->
+  <line class="ln" x1="250" y1="104" x2="328" y2="104" marker-end="url(#a)"/>
+  <text class="lbl" x="289" y="96" text-anchor="middle">verified</text>
+  <!-- SSIVC -> MBI -->
+  <line class="ln" x1="540" y1="104" x2="618" y2="104" marker-end="url(#a)"/>
+  <text class="lbl" x="579" y="96" text-anchor="middle">issue VC</text>
+  <!-- MBI -> Chain -->
+  <line class="ln" x1="830" y1="104" x2="908" y2="104" marker-end="url(#a)"/>
+  <text class="lbl" x="869" y="96" text-anchor="middle">keys, status</text>
+
+  <!-- 1a Agent -> SSIVC -->
+  <line class="ln" x1="150" y1="300" x2="420" y2="144" marker-end="url(#a)"/>
+  <!-- 1b / 2 / 6 Agent <-> MBI -->
+  <line class="ln" x1="250" y1="300" x2="690" y2="144" marker-start="url(#a)" marker-end="url(#a)"/>
+  <!-- 7 / 8a Agent <-> AVG -->
+  <line class="ln" x1="292" y1="345" x2="618" y2="345" marker-start="url(#a)" marker-end="url(#a)"/>
+  <!-- 7a AVG -> Chain -->
+  <line class="ln" x1="820" y1="300" x2="990" y2="144" marker-end="url(#a)"/>
+  <!-- 3 / 5 / 8b Agent <-> Service -->
+  <path class="ln" d="M165 392 V556 H618" marker-start="url(#a)" marker-end="url(#a)"/>
+  <!-- 4 Service -> AVG ; 8c AVG -> Service -->
+  <line class="ln" x1="700" y1="518" x2="700" y2="394" marker-end="url(#a)"/>
+  <line class="lp" x1="790" y1="394" x2="790" y2="518" marker-end="url(#p)"/>
+  <!-- Agent -> Registry -->
+  <line class="ln" x1="80" y1="392" x2="80" y2="678" marker-end="url(#a)"/>
+  <text class="lbl" x="90" y="610">find services,</text>
+  <text class="lbl" x="90" y="625">read service card</text>
+
+  <!-- S2 Admin -> AVG -->
+  <line class="lp" x1="910" y1="345" x2="872" y2="345" marker-end="url(#p)"/>
+  <!-- S2 Admin -> SSIVC (Service Cert) -->
+  <path class="lp" d="M1160 330 H1192 V36 H435 V68" marker-end="url(#p)"/>
+  <text class="lblp" x="812" y="28" text-anchor="middle">S2  issue / revoke Service Cert (Admin Portal → SSIVC → MBI)</text>
+  <!-- S2 Admin -> HSM -->
+  <line class="lp" x1="1010" y1="392" x2="1010" y2="518" marker-end="url(#p)"/>
+  <text class="lblp" x="1018" y="450">service did:zid +</text>
+  <text class="lblp" x="1018" y="465">did:oan keys, signing</text>
+  <!-- S3 Admin -> Registry -->
+  <line class="lp" x1="1140" y1="392" x2="1140" y2="678" marker-end="url(#p)"/>
+  <text class="lblp" x="1132" y="640" text-anchor="end">S3  list / hide / remove</text>
+  <text class="lblp" x="1132" y="655" text-anchor="end">(AVG updated first)</text>
+
+  <!-- ===== boxes ===== -->
+  <rect class="box" x="40" y="70" width="210" height="74" rx="8"/>
+  <text class="t" x="145" y="98">ZVG</text>
+  <text class="s" x="145" y="117">Owner check:</text>
+  <text class="s" x="145" y="133">MyDigital ID (Phase 1 only)</text>
+
+  <rect class="box" x="330" y="70" width="210" height="74" rx="8"/>
+  <text class="t" x="435" y="98">SSIVC</text>
+  <text class="s" x="435" y="117">VC issuance backend</text>
+  <text class="s" x="435" y="133">+ Service Cert issue / revoke</text>
+
+  <rect class="box" x="620" y="70" width="210" height="74" rx="8"/>
+  <text class="t" x="725" y="98">MBI VC Service</text>
+  <text class="s" x="725" y="117">Issues Agent + Service Certs</text>
+  <text class="s" x="725" y="133">Builds VP · does not verify</text>
+
+  <rect class="box" x="910" y="70" width="210" height="74" rx="8"/>
+  <text class="t" x="1015" y="98">Zetrix Chain</text>
+  <text class="s" x="1015" y="117">Issuer keys</text>
+  <text class="s" x="1015" y="133">VC status (revocation)</text>
+
+  <rect class="box" x="40" y="300" width="250" height="92" rx="8"/>
+  <text class="t" x="165" y="328">Calling Agent</text>
+  <text class="s" x="165" y="347">Zetrix Agentic Wallet (MCP)</text>
+  <text class="s" x="165" y="363">Holds Agent Cert · owner consent</text>
+  <text class="s" x="165" y="379">Keys in Wallet BE HSM</text>
+
+  <rect class="new" x="620" y="300" width="250" height="92" rx="8"/>
+  <text class="tag" x="745" y="292" fill="#4f46e5">NEW</text>
+  <text class="t" x="745" y="326">AVG</text>
+  <text class="s" x="745" y="344">Agent Verification Gateway</text>
+  <text class="s" x="745" y="360">OID4VP verifier · checks API key</text>
+  <text class="s" x="745" y="376">HMAC-signed result · 30-day logs</text>
+
+  <rect class="new" x="910" y="300" width="250" height="92" rx="8"/>
+  <text class="tag" x="1035" y="292" fill="#4f46e5">NEW</text>
+  <text class="t" x="1035" y="326">Admin Portal</text>
+  <text class="s" x="1035" y="344">Registry controllers (telcos)</text>
+  <text class="s" x="1035" y="360">onboard / approve / suspend</text>
+  <text class="s" x="1035" y="376">API key + HMAC secret</text>
+
+  <rect class="box" x="620" y="520" width="250" height="74" rx="8"/>
+  <text class="t" x="745" y="548">Service</text>
+  <text class="s" x="745" y="567">Agent, website, API or MCP server</text>
+  <text class="s" x="745" y="583">Checks HMAC on the result</text>
+
+  <rect class="box" x="910" y="520" width="200" height="74" rx="8"/>
+  <text class="t" x="1010" y="548">Zetrix HSM</text>
+  <text class="s" x="1010" y="567">Service DID private keys</text>
+  <text class="s" x="1010" y="583">never leave the HSM</text>
+
+  <rect class="new" x="40" y="680" width="1120" height="64" rx="8"/>
+  <text class="tag" x="1085" y="672" fill="#4f46e5">NEW</text>
+  <text class="t" x="600" y="707">Zetrix Registry (did:zid) · source of truth</text>
+  <text class="s" x="600" y="728">Mirrored to OpenAgenet / CAICT (did:oan) through the Registrar API · mirror failure never changes the Zetrix listing</text>
+
+  <!-- ===== step badges ===== -->
+  <circle class="bd" cx="285" cy="222" r="14"/><text class="bt" x="285" y="226">1a</text>
+  <rect class="bd" x="440" y="210" width="62" height="24" rx="12"/><text class="bt" x="471" y="226">1b · 2 · 6</text>
+  <rect class="bd" x="425" y="333" width="58" height="24" rx="12"/><text class="bt" x="454" y="349">7 · 8a</text>
+  <circle class="bd" cx="905" cy="222" r="14"/><text class="bt" x="905" y="226">7a</text>
+  <rect class="bd" x="365" y="544" width="70" height="24" rx="12"/><text class="bt" x="400" y="560">3 · 5 · 8b</text>
+  <circle class="bd" cx="700" cy="456" r="14"/><text class="bt" x="700" y="460">4</text>
+  <circle class="bd" cx="790" cy="456" r="14"/><text class="bt" x="790" y="460">8c</text>
+  <circle cx="891" cy="345" r="13" fill="#4f46e5"/><text x="891" y="349" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">S2</text>
+
+  <!-- ===== legend ===== -->
+  <line x1="40" y1="776" x2="1180" y2="776" stroke="#e2e8f0"/>
+  <text class="h" x="40" y="806">Getting an Agent Cert</text>
+  <text class="lg" x="40" y="830">1a  Verified: agent asks SSIVC; owner approves in</text>
+  <text class="lg" x="62" y="847">MyDigital ID via ZVG; SSIVC asks MBI to issue.</text>
+  <text class="lg" x="40" y="868">1b  Basic: agent asks MBI directly, no owner check.</text>
+  <text class="lg" x="40" y="889">2    Agent downloads its Agent Cert from MBI.</text>
+  <text class="lg" x="40" y="914" font-style="italic">Issuer is always Zetrix (MBI). Telco identity</text>
+  <text class="lg" x="40" y="931" font-style="italic">source is parked in Phase 1 (OD-01).</text>
+
+  <text class="h" x="430" y="806">Service setup (once)</text>
+  <text class="lgp" x="430" y="830">S1  Maker submits; Checker or Client Admin approves.</text>
+  <text class="lgp" x="430" y="851">S2  AVG registers the service and issues the API key</text>
+  <text class="lgp" x="452" y="868">+ HMAC secret; Zetrix HSM creates did:zid + did:oan;</text>
+  <text class="lgp" x="452" y="885">SSIVC asks MBI to issue the Service Cert.</text>
+  <text class="lgp" x="430" y="906">S3  Listed in the Zetrix registry; DID document signed</text>
+  <text class="lgp" x="452" y="923">by Zetrix and mirrored to OpenAgenet.</text>
+
+  <text class="h" x="820" y="806">Calling a service</text>
+  <text class="lg" x="820" y="830">3    Agent calls the service (API, MCP, A2A).</text>
+  <text class="lg" x="820" y="848">4    Service asks AVG for a proof request (API key).</text>
+  <text class="lg" x="820" y="866">5    Agent gets it; checks AVG URL on service card.</text>
+  <text class="lg" x="820" y="884">6    Agent asks MBI to create the VP (signs nonce).</text>
+  <text class="lg" x="820" y="902">7    Agent submits the VP straight to AVG.</text>
+  <text class="lg" x="820" y="920">7a  AVG reads issuer key + VC status on chain.</text>
+  <text class="lg" x="820" y="938">8a  AVG returns an HMAC-signed result.</text>
+  <text class="lg" x="820" y="956">8b  Agent forwards it in the x401 header.</text>
+  <text class="lgp" x="820" y="974">8c  AVG also POSTs it to the service callback.</text>
+
+  <text x="40" y="1012" font-size="11" fill="#64748b">Source: PRD_AZW_26001 v1.3.1, section 1.6 · MBI is not part of verification · AVG is Zetrix-hosted for every service in Phase 1 (OD-23)</text>
+</svg>

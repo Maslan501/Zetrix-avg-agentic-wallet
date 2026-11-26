@@ -54,4 +54,4 @@ The Dashboard shows a **Failed checks today** tile for the services the user can
 
 **Sequence Diagram**
 
-<figure><img src="../.gitbook/assets/seq-verification-logs.png" alt="View services and verification logs"><figcaption><p>View services and verification logs</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/avg-10-verification-logs.svg" alt="View services and verification logs"><figcaption><p>View services and verification logs</p></figcaption></figure>

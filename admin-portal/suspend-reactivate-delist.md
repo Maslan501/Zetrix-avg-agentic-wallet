@@ -46,6 +46,6 @@ Services can go bad after approval. Suspension is a fast, reversible stop. Delis
 
 **Sequence Diagram**
 
-<figure><img src="../.gitbook/assets/seq-suspend-reactivate-delist.png" alt="Suspend, reactivate or delist a service"><figcaption><p>Suspend, reactivate or delist a service</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/avg-07-suspend-reactivate-delist.svg" alt="Suspend, reactivate or delist a service"><figcaption><p>Suspend, reactivate or delist a service</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/flow-us-09.png" alt="Suspend, reactivate or delist process flow"><figcaption><p>Process flow: suspend, reactivate or delist</p></figcaption></figure>

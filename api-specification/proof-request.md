@@ -114,4 +114,4 @@ AVG does not sign the proof request in Phase 1. Instead, the agent wallet looks 
 
 **Sequence Diagram**
 
-<figure><img src="../.gitbook/assets/seq-create-proof-request.png" alt="Issue proof request (x401 challenge) for a service"><figcaption><p>Issue proof request (x401 challenge) for a service</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/avg-01-create-proof-request.svg" alt="Issue proof request (x401 challenge) for a service"><figcaption><p>Issue proof request (x401 challenge) for a service</p></figcaption></figure>

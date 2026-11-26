@@ -1,0 +1,29 @@
+title AVG-09 Issue and Revoke Service Cert · PRD 2.15 · US-17
+participant Admin_Portal_Backend
+participant AVG
+participant SSIVC
+participant MBI
+participant Zetrix_Registry
+==ISSUE ON APPROVAL==
+Admin_Portal_Backend->SSIVC:issue Service Cert (subject = service did:zid, approver = registry controller)
+SSIVC->MBI:issue VC with Service Cert template
+MBI-->SSIVC:Service Cert ID, validUntil (issue + 12 months)
+SSIVC-->Admin_Portal_Backend:Service Cert ID, validUntil
+Admin_Portal_Backend-->Zetrix_Registry:add Service Cert ID to listing
+==REVOKE ON SUSPEND OR DELIST==
+Admin_Portal_Backend->AVG:block service first
+Admin_Portal_Backend->SSIVC:revoke Service Cert
+SSIVC->MBI:revoke VC
+MBI-->SSIVC:revoked (status on Zetrix chain)
+SSIVC-->Admin_Portal_Backend:revoked
+==REACTIVATE OR RENEW (30 DAYS BEFORE EXPIRY)==
+Admin_Portal_Backend->SSIVC:issue new Service Cert
+SSIVC->MBI:issue VC with Service Cert template
+MBI-->SSIVC:new Service Cert ID
+SSIVC-->Admin_Portal_Backend:new Service Cert ID (on renewal, old cert revoked)
+alt ISSUE OR RENEWAL FAILS
+Admin_Portal_Backend->Admin_Portal_Backend:service stays Active in AVG; issue / renewal failed, Retry
+end
+alt REVOKE FAILS
+Admin_Portal_Backend->Admin_Portal_Backend:service stays blocked in AVG; revoke failed, Retry
+end

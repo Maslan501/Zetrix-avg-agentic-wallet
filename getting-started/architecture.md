@@ -2,10 +2,10 @@
 
 Phase 1 adds three new components (AVG, the Admin Portal and the Zetrix registry) on top of the existing Zetrix identity stack.
 
-<figure><img src="../.gitbook/assets/avg-architecture.png" alt="Agentic Zetrix Wallet Phase 1 system architecture"><figcaption><p>Agentic Zetrix Wallet Phase 1 system architecture</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/avg-architecture-phase1.svg" alt="Agentic Zetrix Wallet Phase 1 system architecture"><figcaption><p>Agentic Zetrix Wallet Phase 1 system architecture (PRD v1.3.1, section 1.6)</p></figcaption></figure>
 
-{% hint style="warning" %}
-The diagram shows the Telco identity source. Telco as an owner identity source is **parked** in Phase 1 (OD-01). Phase 1 uses ZVG / MyDigital ID only.
+{% hint style="info" %}
+Phase 1 uses ZVG / MyDigital ID as the only owner identity source. The Telco identity source is parked (OD-01) and is not shown. Every AVG sequence is drawn step by step in [AVG Flows](avg-flows.md).
 {% endhint %}
 
 ## **Components**

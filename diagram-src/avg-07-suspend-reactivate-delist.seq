@@ -1,0 +1,32 @@
+title AVG-07 Suspend, Reactivate or Delist a Service · PRD 2.8 · US-09
+participant Checker_Client_Admin_or_Super_Admin
+participant Admin_Portal_Backend
+participant AVG
+participant SSIVC
+participant MBI
+participant Zetrix_Registry
+==SUSPEND==
+Checker_Client_Admin_or_Super_Admin->Admin_Portal_Backend:suspend (reason)
+Admin_Portal_Backend->AVG:set Suspended first (calls rejected within 60 s; API keys kept)
+Admin_Portal_Backend->SSIVC:revoke Service Cert
+SSIVC->MBI:revoke VC (status on Zetrix chain)
+Admin_Portal_Backend-->Zetrix_Registry:hide listing + mirror
+==REACTIVATE==
+Checker_Client_Admin_or_Super_Admin->Admin_Portal_Backend:reactivate (reason)
+Admin_Portal_Backend->Admin_Portal_Backend:if suspended by Zetrix, only Zetrix can reactivate
+Admin_Portal_Backend->AVG:set Active
+Admin_Portal_Backend->SSIVC:issue new Service Cert (old stays revoked)
+SSIVC->MBI:issue VC with Service Cert template
+Admin_Portal_Backend-->Zetrix_Registry:show listing + mirror
+==DELIST (PERMANENT)==
+Checker_Client_Admin_or_Super_Admin->Admin_Portal_Backend:delist (reason, typed service name)
+Admin_Portal_Backend->AVG:revoke all API keys; set Delisted
+Admin_Portal_Backend->SSIVC:revoke Service Cert
+SSIVC->MBI:revoke VC
+Admin_Portal_Backend-->Zetrix_Registry:remove listing + mirror; deactivate did:oan
+alt CLIENT TRIES TO LIFT A ZETRIX SUSPENSION
+Admin_Portal_Backend-->Checker_Client_Admin_or_Super_Admin:Only Zetrix can reactivate this service.
+end
+alt SERVICE CERT REVOKE FAILS
+Admin_Portal_Backend->Admin_Portal_Backend:service stays blocked in AVG; cert revoke failed, Retry
+end
