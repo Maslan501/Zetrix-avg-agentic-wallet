@@ -23,7 +23,7 @@ Every flow that touches the Agent Verification Gateway. The flows fall into two 
 
 ### AVG-01 Create Proof Request
 
-The service asks AVG, with its API key, for a single-use proof request. AVG validates the key, service status, rate limit and requested claims, then returns an OID4VP proof request with a 5-minute x401 challenge. See [Proof Request](/broken/pages/345a949b4c46831b94aff1ff24a4ab9788759f1d).
+The service asks AVG, with its API key, for a single-use proof request. AVG validates the key, service status, rate limit and requested claims, then returns an OID4VP proof request with a 5-minute x401 challenge. See **Proof Requests** under [API Specification](../api-specification/README.md).
 
 <figure><img src="../.gitbook/assets/avg-01-create-proof-request.svg" alt="AVG-01 Create proof request"><figcaption><p>AVG-01 Create proof request (x401 challenge)</p></figcaption></figure>
 
@@ -35,7 +35,7 @@ The wallet trusts the proof request only if the service is in the Zetrix registr
 
 ### AVG-03 AVG Verifies VP and Delivers the Signed Result
 
-AVG verifies the VP against the Zetrix chain (MBI is not called), signs the result with the service's HMAC secret, returns it to the agent and posts the same result to the service's callback. See [Verifiable Presentation Submission](/broken/pages/WhWgFs8kQorVYR3xSNKI) and [Signed Verification Result](../api-specification/signed-verification-result.md).
+AVG verifies the VP against the Zetrix chain (MBI is not called), signs the result with the service's HMAC secret, returns it to the agent and posts the same result to the service's callback. See **Agent Endpoints** under [API Specification](../api-specification/README.md) and [Signed Verification Result](../api-specification/signed-verification-result.md).
 
 <figure><img src="../.gitbook/assets/avg-03-verify-vp.svg" alt="AVG-03 AVG verifies VP and delivers signed result"><figcaption><p>AVG-03 AVG verifies VP (OID4VP) and delivers a signed result</p></figcaption></figure>
 
@@ -81,6 +81,6 @@ Service Certs are issued through SSIVC and MBI. If a revoke fails, the service s
 
 ### AVG-10 Read AVG Verification Logs
 
-Portal users read logs within their organisation scope; services read their own logs through the AVG log API. Claim values are never stored. See [Services and Verification Logs](../admin-portal/services-and-verification-logs.md) and [Verification Logs API](/broken/pages/4852c37944f6af593b3fc94d12f9d6b7c1e7f588).
+Portal users read logs within their organisation scope; services read their own logs through the AVG log API. Claim values are never stored. See [Services and Verification Logs](../admin-portal/services-and-verification-logs.md) and **Logs** under [API Specification](../api-specification/README.md).
 
 <figure><img src="../.gitbook/assets/avg-10-verification-logs.svg" alt="AVG-10 Read AVG verification logs"><figcaption><p>AVG-10 Read AVG verification logs</p></figcaption></figure>

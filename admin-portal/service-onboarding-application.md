@@ -44,7 +44,7 @@ Owner name, owner ID number, date of birth, country of origin and owner phone nu
 
 ## **Result Delivery**
 
-Every service gets AVG's signed result both ways (x401 header via the agent, and callback). This is fixed. The **Callback URL** is mandatory, must use HTTPS and must be on the domain that passed the domain check.
+Every service gets AVG's signed result both ways (`PROOF-RESPONSE` header via the agent, and callback). This is fixed. The **Callback URL** is mandatory, must use HTTPS and must be on the domain that passed the domain check.
 
 ## **Field Validation**
 

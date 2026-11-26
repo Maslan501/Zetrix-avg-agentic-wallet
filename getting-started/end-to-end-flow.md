@@ -32,4 +32,4 @@ The agent calls the service. The service gets a proof request from AVG and passe
 
 <figure><img src="../.gitbook/assets/flow-e2e-3-agent-calls-service.png" alt="Agent calls a service"><figcaption><p>Operational Flow 3: Agent calls a service</p></figcaption></figure>
 
-See [Proof Request](/broken/pages/345a949b4c46831b94aff1ff24a4ab9788759f1d), [Verifiable Presentation Submission](/broken/pages/WhWgFs8kQorVYR3xSNKI) and [Signed Verification Result](../api-specification/signed-verification-result.md).
+See **Proof Requests** and **Agent Endpoints** under [API Specification](../api-specification/README.md), and [Signed Verification Result](../api-specification/signed-verification-result.md).

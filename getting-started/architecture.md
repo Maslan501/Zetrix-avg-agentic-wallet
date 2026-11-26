@@ -52,7 +52,7 @@ Phase 1 uses ZVG / MyDigital ID as the only owner identity source. Other identit
 | 7 | Agent submits the VP straight to AVG. |
 | 7a | AVG reads the issuer key and VC status on the Zetrix chain. |
 | 8a | AVG returns an HMAC-signed result to the agent. |
-| 8b | Agent forwards the signed result in the x401 header; the service recomputes the HMAC. |
+| 8b | Agent forwards the signed result in the `PROOF-RESPONSE` header; the service recomputes the HMAC. |
 | 8c | AVG also posts the same signed result to the service's callback URL. |
 
 ## **Design Principles**

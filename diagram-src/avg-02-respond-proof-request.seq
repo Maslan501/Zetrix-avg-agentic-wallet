@@ -20,7 +20,7 @@ Calling_Agent->MBI:6. create VP (requested claims only; ownerIdType with ownerId
 MBI-->Calling_Agent:VP
 Calling_Agent->AVG:7. submit VP to AVG URL on card (proofRequestId)
 AVG-->Calling_Agent:8a. signed result
-Calling_Agent->Service:8b. forward signed result unchanged (x401 header)
+Calling_Agent->Service:8b. forward signed result unchanged (PROOF-RESPONSE header)
 alt OWNER DECLINES
 Owner-->Calling_Agent:no
 Calling_Agent->Service:DISCLOSURE_DECLINED (no VP created)

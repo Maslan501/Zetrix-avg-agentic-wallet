@@ -36,7 +36,7 @@
 <path d="M559.0500000000001 643 h28 v54 h-24" fill="none" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
 <text x="328.95000000000005" y="725" font-size="13" text-anchor="middle" fill="#1f2937">8a. signed result (true + disclosed claims)</text>
 <line x1="559.0500000000001" y1="734" x2="101.85" y2="734" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
-<text x="559.0500000000001" y="766" font-size="13" text-anchor="middle" fill="#1f2937">8b. forward signed result in x401 header</text>
+<text x="559.0500000000001" y="766" font-size="13" text-anchor="middle" fill="#1f2937">8b. forward signed result in PROOF-RESPONSE header</text>
 <line x1="98.85" y1="775" x2="1016.2500000000001" y2="775" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
 <text x="1057.25" y="811" font-size="13" fill="#1f2937">recompute HMAC with own secret;</text>
 <text x="1057.25" y="827" font-size="13" fill="#1f2937">match proofRequestId</text>

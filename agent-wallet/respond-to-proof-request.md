@@ -14,7 +14,7 @@ Owner consent here is about sharing identity claims. It is not permission for th
 
 **Input**
 
-The proof request as returned by [Create Proof Request](/broken/pages/345a949b4c46831b94aff1ff24a4ab9788759f1d), passed on unchanged by the service:
+The proof request as returned by `POST /v1/proof-requests` (see **Proof Requests** under [API Specification](../api-specification/README.md)), passed on unchanged by the service:
 
 | Type            | Params               | Description               |
 | --------------- | -------------------- | ------------------------- |

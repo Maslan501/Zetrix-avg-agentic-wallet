@@ -18,7 +18,7 @@ AVG and its supporting components provide the following functions:
 | --- | --- |
 | Create Proof Request | A service asks AVG, using its API key, for a single-use OID4VP proof request with an x401 challenge. |
 | Verify Agent VP | AVG verifies the agent's Verifiable Presentation (VP) itself, using issuer keys and VC status on the Zetrix chain. |
-| Signed Result Delivery | AVG returns an HMAC-signed result to the agent (forwarded in the x401 header) and posts the same result to the service's callback URL. |
+| Signed Result Delivery | AVG returns an HMAC-signed result to the agent (forwarded in the `PROOF-RESPONSE` header) and posts the same result to the service's callback URL. |
 | Verification Logs | Every proof request and verification is logged for 30 days, without claim values. |
 | Service Onboarding | Registry controllers onboard, approve, suspend and delist services through the Admin Portal (maker / checker). |
 | Service Discovery | Agents search the Zetrix registry for approved services and see up front which credential and claims each one asks for. |

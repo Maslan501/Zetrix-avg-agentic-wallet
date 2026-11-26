@@ -44,7 +44,7 @@ The Dashboard shows a **Failed checks today** tile for the services the user can
 
 * Claim values are never stored or shown in the portal or log API. They go only to the service inside AVG's signed result.
 * Logs are kept 30 days, then deleted by a daily clean-up job.
-* No CSV export in Phase 1. Services read their own logs through the [Verification Logs API](/broken/pages/4852c37944f6af593b3fc94d12f9d6b7c1e7f588).
+* No CSV export in Phase 1. Services read their own logs through the AVG log API (`GET /v1/logs`, see **Logs** under [API Specification](../api-specification/README.md)).
 
 ## **Messages**
 

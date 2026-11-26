@@ -15,7 +15,7 @@ AVG->AVG:check in order: (1) challenge + signature (2) Zetrix issuer from AVG co
 ==STEPS 8A TO 8C==
 AVG->AVG:sign result with service HMAC secret; log attempt (no claim values, 30 days)
 AVG-->Calling_Agent:8a. signed result (true + disclosed claims)
-Calling_Agent->Service:8b. forward signed result in x401 header
+Calling_Agent->Service:8b. forward signed result in PROOF-RESPONSE header
 Service->Service:recompute HMAC with own secret; match proofRequestId
 Service-->Calling_Agent:serve the call
 AVG-->Service:8c. POST same signed result to callback URL (always)

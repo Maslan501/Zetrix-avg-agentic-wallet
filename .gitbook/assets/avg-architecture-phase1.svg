@@ -158,7 +158,7 @@
   <text class="lg" x="820" y="902">7    Agent submits the VP straight to AVG.</text>
   <text class="lg" x="820" y="920">7a  AVG reads issuer key + VC status on chain.</text>
   <text class="lg" x="820" y="938">8a  AVG returns an HMAC-signed result.</text>
-  <text class="lg" x="820" y="956">8b  Agent forwards it in the x401 header.</text>
+  <text class="lg" x="820" y="956">8b  Agent forwards it (PROOF-RESPONSE header).</text>
   <text class="lgp" x="820" y="974">8c  AVG also POSTs it to the service callback.</text>
 
   <text x="40" y="1012" font-size="11" fill="#64748b">MBI is not part of verification · AVG is Zetrix-hosted for every service in Phase 1</text>

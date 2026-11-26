@@ -1,58 +1,59 @@
 # Signed Verification Result
 
-Every verification produces one signed result. The service receives it **two ways**: the agent forwards it in the x401 header (step 8b), and AVG posts it to the service's callback URL (step 8c). Both deliveries are fixed for every service.
+Every verification produces one signed result. The service receives it **two ways**: the agent forwards it in the `PROOF-RESPONSE` header (step 8b), and AVG posts it to the service's callback URL (step 8c). Both deliveries are fixed for every service.
 
-## **Signed Result Fields**
+## **What AVG Signs**
+
+AVG signs a JSON text, the **payload**, and sends it with a timestamp and a signature.
 
 ```json
 {
-    "result": true,
-    "reasonCode": null,
-    "proofRequestId": "pr_01JD8Q6W1X4M2V9K7T3N5B8C0A",
-    "serviceId": "svc_01JD7ZK3M0",
-    "credentialType": "VERIFIED",
-    "disclosedClaims": {
-        "agentName": "ali-travel-agent",
-        "ownerVerified": true,
-        "evidenceProvider": "mydigitalid"
+    "presentationId": "7f3c2a10-5b8e-4d1a-9c46-0e2b7a1d9f33",
+    "status": "VERIFIED",
+    "verified": true,
+    "verifiedClaims": {
+        "verifiedAgentCert": {
+            "agentName": "Example Agent",
+            "ownerVerified": true,
+            "evidenceProvider": "mydigitalid"
+        }
     },
-    "serviceReference": "quote-req-000123",
-    "timestamp": "2026-11-20T09:01:12Z",
-    "signature": "Zq8f0m...Q2c="
+    "credentialLevel": "verified",
+    "serviceId": "svc_example"
 }
 ```
 
 | Type | Params | Description |
 | --- | --- | --- |
-| boolean | `result` | `true` only when every check passed. A `true` result proves identity only; it does not authorise any action. |
-| string | `reasonCode` | `null` when `result` is `true`; otherwise the reason. See [Result and Error Codes](result-and-error-codes.md). |
-| array of string | `missingClaims` | Present only with `MISSING_CLAIMS`. |
-| string | `proofRequestId` | The proof request this result answers. Use it to match and de-duplicate. |
+| string | `presentationId` | The proof request id. Use it to match and de-duplicate. |
+| string | `status` | `VERIFIED` or `REJECTED`. |
+| boolean | `verified` | `true` only when every check passed. A `true` result proves identity only; it does not authorise any action. |
+| object | `verifiedClaims` | The disclosed claims that were asked for, under the root of the credential presented (`verifiedAgentCert` or `basicAgentCert`). Empty when `verified` is `false`. A Basic result never holds `ownerVerified`. |
+| string | `credentialLevel` | `basic` or `verified`. Present when `verified` is `true`. |
+| string | `reasonCode` | Why the check failed. See [Result and Error Codes](result-and-error-codes.md). |
 | string | `serviceId` | The service the result is for. |
-| string | `credentialType` | Agent Cert type presented: `BASIC` or `VERIFIED`. |
-| object | `disclosedClaims` | Claim values the agent disclosed. Only the service receives these; they are never stored in AVG logs. |
-| string | `serviceReference` | Your reference from the proof request, if any. |
-| string | `timestamp` | Time AVG produced the result, ISO 8601 UTC. |
-| string | `signature` | HMAC over the result, keyed with the service's signing secret. |
 
-**Signature computation**
+## **Signature**
 
-1. Take the signed result without the `signature` field.
-2. Serialise it as canonical JSON (keys sorted, no whitespace, UTF-8).
-3. Compute `HMAC-SHA256(signingSecret, canonicalJson)`.
-4. Encode as Base64.
+```
+signature = base64( HMAC-SHA256( key     = your signing secret,
+                                 message = timestamp + "." + payload ) )
+```
+
+* `payload` is the exact text AVG sent. Never parse and re-serialise it before checking.
+* `timestamp` is the ISO 8601 instant AVG sent, used as it is.
 
 ***
 
-## Delivery by x401 Header (8b)
+## Delivery by Header (8b)
 
-The agent sends AVG's signed result to the service in a request header when it retries its call.
+The agent forwards the result to the service in a request header.
 
 **Request Headers**
 
 | Header | Type | Description |
 | --- | --- | --- |
-| `x401` | String | Base64url-encoded signed result JSON. |
+| `PROOF-RESPONSE` | String | base64url of `{"payload": "...", "signature": "...", "timestamp": "..."}` |
 
 The agent cannot change the result: any change breaks the signature.
 
@@ -60,72 +61,72 @@ The agent cannot change the result: any change breaks the signature.
 
 ## Delivery by Callback (8c)
 
-Right after verifying, AVG posts the same signed result (same signature, includes `proofRequestId`) to the service's registered callback URL.
+Right after every check, AVG posts the same result to the service's registered HTTPS callback URL. The endpoint is documented on the webhook page under this section.
 
-**Request**
+**Request Headers**
 
-| Method | URL |
-| --- | --- |
-| POST | `{callbackUrl}` (registered at onboarding; HTTPS, on the verified endpoint domain) |
+| Header | Type | Description |
+| --- | --- | --- |
+| `X-Callback-Signature` | String | base64 HMAC-SHA256 of `timestamp + "." + signed_result` |
+| `X-Callback-Timestamp` | String | ISO 8601 instant, used as it is. |
 
 **Request Body:** *(JSON)*
 
-The signed result object, exactly as above.
+```json
+{
+    "presentation_id": "7f3c2a10-5b8e-4d1a-9c46-0e2b7a1d9f33",
+    "signed_result": "{\"presentationId\":\"7f3c2a10-5b8e-4d1a-9c46-0e2b7a1d9f33\",\"status\":\"VERIFIED\",\"verified\":true}"
+}
+```
 
-**Expected Response**
-
-Any `2xx` status within **5 seconds**.
+**Expected Response:** any `2xx` within **5 seconds**.
 
 **Retry Policy**
 
 | Attempt | When |
 | --- | --- |
-| 1 | Immediately after verification |
+| 1 | Immediately after the check |
 | 2 | 5 seconds later |
 | 3 | 30 seconds later |
 | 4 | 2 minutes later |
-| — | Then the delivery is logged as `CALLBACK_FAILED`. Verification itself is not repeated. |
+| — | Then the delivery is logged as `CALLBACK_FAILED`. The check is not repeated, and the agent still has the result. |
 
 ***
 
-## **Service-Side Verification (8b)**
-
-The service recomputes the HMAC with the secret it shares with AVG and compares. Match means the result is valid and not tampered with.
+## **Service-Side Check**
 
 ```javascript
 const crypto = require("crypto");
 
-function canonical(obj) {
-  if (Array.isArray(obj)) return `[${obj.map(canonical).join(",")}]`;
-  if (obj && typeof obj === "object") {
-    return `{${Object.keys(obj).sort()
-      .map(k => `${JSON.stringify(k)}:${canonical(obj[k])}`).join(",")}}`;
-  }
-  return JSON.stringify(obj);
-}
-
-function verifyAvgResult(signedResult, secrets /* [current, previous] */) {
-  const { signature, ...payload } = signedResult;
-  const body = canonical(payload);
-  return secrets.some(secret => {
-    const expected = crypto.createHmac("sha256", secret).update(body).digest();
-    const given = Buffer.from(signature, "base64");
+// header: value of PROOF-RESPONSE, or build { payload: body.signed_result,
+//   signature: X-Callback-Signature, timestamp: X-Callback-Timestamp } for the callback
+function checkAvgResult({ payload, signature, timestamp }, secrets /* [current, previous] */) {
+  const skew = Math.abs(Date.now() - Date.parse(timestamp));
+  if (!(skew <= 300_000)) return null;                       // refuse if more than 300 s off
+  const given = Buffer.from(signature, "base64");
+  const ok = secrets.some(secret => {
+    const expected = crypto.createHmac("sha256", secret)
+      .update(`${timestamp}.${payload}`).digest();
     return given.length === expected.length && crypto.timingSafeEqual(given, expected);
   });
+  return ok ? JSON.parse(payload) : null;                    // parse only after the check
+}
+
+function readProofResponseHeader(value) {
+  return JSON.parse(Buffer.from(value, "base64url").toString("utf8"));
 }
 ```
 
 **Validation Rules**
 
-| Field | Rule | Error Message |
+| Check | Rule | On failure |
 | --- | --- | --- |
-| `signature` | Must match the HMAC recomputed with the service's secret (current, or previous during a 24-hour rotation). | Refuse the call (`HMAC_MISMATCH`). |
-| `proofRequestId` | Must be a proof request this service created. | Refuse the call. |
-| `serviceId` | Must be this service. | Refuse the call. |
-| `result` | Must be `true` to serve the call. | Refuse with the `reasonCode`. |
+| Signature | Matches the HMAC computed with your secret (current, or previous during a 24-hour rotation). Compare in constant time. | Refuse the call. |
+| Timestamp | Not more than 300 seconds from your clock, past or future. | Refuse the call. |
+| `presentationId` | A proof request your service created, used once. | Refuse the call. |
+| `verified` / `status` | `verified` is `true` and `status` is `VERIFIED`. | Refuse with the `reasonCode`. |
 
 **Notes**
 
-* **Idempotency:** the service receives each result at least twice (header and callback), plus any callback retries. Treat all of them for the same `proofRequestId` as one result.
-* If the callback fails, the result is still valid through the x401 header.
-* Using the callback for an agent logging in to a website on the owner's behalf is not in Phase 1 (needs owner permission policy, Phase 2).
+* **Idempotency:** the service receives each result at least twice (header and callback), plus any callback retries. Treat all of them for the same `presentationId` as one result.
+* If the callback fails, the result is still valid through the header.
