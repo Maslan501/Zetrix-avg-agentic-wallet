@@ -10,10 +10,6 @@ The Zetrix Agent Verification Gateway (AVG) is a secure, client-facing verificat
 
 AVG is part of the **Agentic Zetrix Wallet** programme. Phase 1 covers agent identity through the existing ZVG / MyDigital ID owner check, service verification through AVG, and service onboarding by registry controllers through a new Admin Portal. Approved services are listed in the Zetrix registry and mirrored on OpenAgenet.
 
-{% hint style="info" %}
-This documentation is based on PRD\_AZW\_26001 *Phase 1 Agent Identity and Service Verification* v1.3.1 (20 November 2026). Endpoint paths, header names and JSON field names marked as **proposed** must be confirmed with the AVG development team before integration.
-{% endhint %}
-
 ## **Functional Scope**
 
 AVG and its supporting components provide the following functions:

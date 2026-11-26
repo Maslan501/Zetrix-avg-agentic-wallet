@@ -19,7 +19,7 @@ Every service call to AVG must carry a valid API key of an **Active** service.
 
 | Header | Type | Description |
 | --- | --- | --- |
-| `X-API-Key` | String | The service's AVG API key. *(Header name proposed.)* |
+| `X-API-Key` | String | The service's AVG API key. |
 | `Content-Type` | String | Always `application/json` |
 
 ```

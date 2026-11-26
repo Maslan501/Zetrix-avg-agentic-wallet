@@ -40,15 +40,11 @@ Zetrix runs its own independent registry. It is the source of truth for which se
 | DID document part | Meaning | Comes from |
 | --- | --- | --- |
 | `id` | The service's did:oan | Created by Zetrix on approval |
-| `controller` | Who controls this entry | Zetrix (holds the did:oan key). Whether Zetrix's own did:oan is shown as controller / publisher is TBC (OD-31). |
+| `controller` | Who controls this entry | Zetrix (holds the did:oan key). |
 | `verificationMethod`, `authentication`, `assertionMethod` | Public key that proves control | Public part of the did:oan key pair in the Zetrix HSM |
 | `service` | Endpoint and protocol | Service Endpoint URL, Service Type |
 | `oanMetadata` | Resource type, name, description, capability tags, use case examples, input / output, OpenAgenet domains, version, manifest / package links, lifecycle state | Onboarding form fields; lifecycle state from service status |
 | `proof` | Signature over the whole document | Signed by Zetrix with the did:oan key in the HSM |
-
-{% hint style="warning" %}
-The OpenAgenet Registrar API, format and approval steps, Zetrix's routing code, and how a service's did:zid and did:oan are linked are still to be confirmed with CAICT (OD-31).
-{% endhint %}
 
 **Sequence Diagram**
 

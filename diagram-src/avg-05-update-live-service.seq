@@ -1,4 +1,4 @@
-title AVG-05 Update a Live Service in AVG · PRD 2.5 BR-11, 2.6 BR-10 · US-06U
+title AVG-05 Update a Live Service in AVG
 participant Maker_or_Client_Admin
 participant Admin_Portal_Backend
 participant DNS_Resolver

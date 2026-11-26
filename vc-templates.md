@@ -35,7 +35,7 @@ Template Expiry is `No` for all three; VC expiry is set per VC at issue. For the
 | --- | --- | --- |
 | `credentialSubject.id` *(VC field)* | The agent's own DID (did:zid). | Set by MBI at issue. |
 | `validUntil` *(VC field)* | Follows the validity the identity source returns. | Set by SSIVC at issue. |
-| `id` *(added by Issuer Platform)* | Value the VC Unique check compares. Filled by SSIVC; value open (OD-38). | Mandatory: Yes (fixed) · Not offered as a claim |
+| `id` *(added by Issuer Platform)* | Value the VC Unique check compares. Filled by SSIVC at issue. | Mandatory: Yes (fixed) · Not offered as a claim |
 | `agentName` (Agent Name) | The agent's unique name. | Mandatory: Yes · Visibility: Show · **Default claim** |
 | `agentPurpose` (Agent Purpose) | What the agent is for. Owner-declared. | Mandatory: No · Visibility: Show · Extra claim, needs consent |
 | `ownerType` (Owner Type) | Individual or Organisation. Always Individual in Phase 1. | Mandatory: No · Visibility: Hide · Not offered as a claim |

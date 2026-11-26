@@ -1,4 +1,4 @@
-title AVG-10 Read AVG Verification Logs · PRD 2.9 · US-10
+title AVG-10 Read AVG Verification Logs
 participant Portal_User
 participant Admin_Portal_Backend
 participant AVG_Log_Store

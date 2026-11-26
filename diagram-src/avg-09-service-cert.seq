@@ -1,4 +1,4 @@
-title AVG-09 Issue and Revoke Service Cert · PRD 2.15 · US-17
+title AVG-09 Issue and Revoke Service Cert
 participant Admin_Portal_Backend
 participant AVG
 participant SSIVC

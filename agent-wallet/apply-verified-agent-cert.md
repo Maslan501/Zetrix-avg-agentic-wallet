@@ -3,7 +3,7 @@
 The owner's agent applies for a Verified Agent Cert, and the owner confirms they are the owner with MyDigital ID through ZVG, so the agent can prove to services that it belongs to a real, verified person.
 
 {% hint style="info" %}
-This is the existing Verified Agent Cert flow, kept in Phase 1 as the only owner check. Phase 1 changes are small: the fee is set to zero and the issued fields are confirmed for AVG claim checks.
+In Phase 1, MyDigital ID is the only owner identity check, and Agent Cert issuance is free.
 {% endhint %}
 
 ## **Flow**
@@ -32,8 +32,8 @@ This is the existing Verified Agent Cert flow, kept in Phase 1 as the only owner
 | Evidence fields | `evidenceProvider` = `mydigitalid`; `evidenceMethod` set; `evidenceDate` set; `ownerVerified` = `true`. Expiry follows the validity MyDigital ID returns. |
 | Assurance level | Set by Zetrix per identity source, not by the service or owner. Phase 1: MyDigital ID = `HIGH`. |
 | Session | If the owner never approves, no Agent Cert is issued. A payment receipt, if any, can be reused for the next session. |
-| Non-Malaysian owners | Owners without MyDigital ID can only get a Basic Agent Cert in Phase 1 (OD-01, OD-04). |
-| One Verified Agent Cert | The wallet holds one Verified Agent Cert. Applying again replaces it (price re-checked with `replacing = true`, owner re-verifies, new name must be free). The old cert is **not** revoked automatically; it stays valid until it expires or Zetrix revokes it (OD-36). |
+| Non-Malaysian owners | Owners without MyDigital ID can only get a Basic Agent Cert in Phase 1. |
+| One Verified Agent Cert | The wallet holds one Verified Agent Cert. Applying again replaces it (price re-checked with `replacing = true`, owner re-verifies, new name must be free). The old cert is **not** revoked automatically; it stays valid until it expires or Zetrix revokes it. |
 
 ## **Outcomes**
 

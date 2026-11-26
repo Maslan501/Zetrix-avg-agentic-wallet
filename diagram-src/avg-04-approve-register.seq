@@ -1,4 +1,4 @@
-title AVG-04 Approve Application and Register Service in AVG · PRD 2.6 · US-07
+title AVG-04 Approve Application and Register Service in AVG
 participant Checker_or_Client_Admin
 participant Admin_Portal_Backend
 participant DNS_Resolver

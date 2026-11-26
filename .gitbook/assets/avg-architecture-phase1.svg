@@ -139,8 +139,8 @@
   <text class="lg" x="62" y="847">MyDigital ID via ZVG; SSIVC asks MBI to issue.</text>
   <text class="lg" x="40" y="868">1b  Basic: agent asks MBI directly, no owner check.</text>
   <text class="lg" x="40" y="889">2    Agent downloads its Agent Cert from MBI.</text>
-  <text class="lg" x="40" y="914" font-style="italic">Issuer is always Zetrix (MBI). Telco identity</text>
-  <text class="lg" x="40" y="931" font-style="italic">source is parked in Phase 1 (OD-01).</text>
+  <text class="lg" x="40" y="914" font-style="italic">Issuer is always Zetrix (MBI). Other identity</text>
+  <text class="lg" x="40" y="931" font-style="italic">sources are planned for later phases.</text>
 
   <text class="h" x="430" y="806">Service setup (once)</text>
   <text class="lgp" x="430" y="830">S1  Maker submits; Checker or Client Admin approves.</text>
@@ -161,5 +161,5 @@
   <text class="lg" x="820" y="956">8b  Agent forwards it in the x401 header.</text>
   <text class="lgp" x="820" y="974">8c  AVG also POSTs it to the service callback.</text>
 
-  <text x="40" y="1012" font-size="11" fill="#64748b">Source: PRD_AZW_26001 v1.3.1, section 1.6 · MBI is not part of verification · AVG is Zetrix-hosted for every service in Phase 1 (OD-23)</text>
+  <text x="40" y="1012" font-size="11" fill="#64748b">MBI is not part of verification · AVG is Zetrix-hosted for every service in Phase 1</text>
 </svg>

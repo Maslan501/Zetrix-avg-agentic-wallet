@@ -1,4 +1,4 @@
-title AVG-08 Update AVG First, Then Publish Listing and Mirror · PRD 2.14 · US-16
+title AVG-08 Update AVG First, Then Publish Listing and Mirror
 participant Admin_Portal_Backend
 participant AVG
 participant Zetrix_HSM
@@ -13,7 +13,7 @@ Zetrix_Registry-->Sync_Queue:ok
 Sync_Queue->Sync_Queue:build did:oan DID document (keys, endpoint, oanMetadata)
 Sync_Queue->Zetrix_HSM:sign with service did:oan key (Zetrix is controller)
 Zetrix_HSM-->Sync_Queue:proof
-Sync_Queue->OpenAgenet_Registrar:submit package / status (API TBC with CAICT)
+Sync_Queue->OpenAgenet_Registrar:submit package / status (Registrar API)
 OpenAgenet_Registrar-->Sync_Queue:accepted
 Sync_Queue-->Admin_Portal_Backend:registry SYNCED, mirror SYNCED
 alt REGISTRY OR MIRROR CALL FAILS

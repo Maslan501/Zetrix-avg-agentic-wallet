@@ -6,7 +6,7 @@ Returns the calling service's own verification log entries from the last 30 days
 
 **Description**
 
-Every proof request and verification AVG performs is logged for 30 days, then deleted. Services do not log in to the Admin Portal in Phase 1, so each service reads its own log through this API using its API key (OD-24). Registry controllers and Zetrix view logs in the Admin Portal instead (see [Services and Verification Logs](../admin-portal/services-and-verification-logs.md)).
+Every proof request and verification AVG performs is logged for 30 days, then deleted. Services do not log in to the Admin Portal in Phase 1, so each service reads its own log through this API using its API key. Registry controllers and Zetrix view logs in the Admin Portal instead (see [Services and Verification Logs](../admin-portal/services-and-verification-logs.md)).
 
 Logs never hold claim values. Only claim **names** are recorded.
 

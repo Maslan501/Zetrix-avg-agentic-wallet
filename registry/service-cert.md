@@ -29,7 +29,7 @@ Agents verifying a service's Service Cert is **not** in Phase 1.
 
 ## **Validity**
 
-`validUntil` = issue date + 12 months (OD-30). A Service Cert is valid only when it is not past expiry, not revoked on the Zetrix chain, and issued by the Zetrix issuer through MBI.
+`validUntil` = issue date + 12 months. A Service Cert is valid only when it is not past expiry, not revoked on the Zetrix chain, and issued by the Zetrix issuer through MBI.
 
 ## **Failure Handling**
 

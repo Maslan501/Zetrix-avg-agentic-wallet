@@ -31,7 +31,7 @@
 
 | ID | Requirement |
 | --- | --- |
-| REL-01 | AVG and Admin Portal availability target 99.5% monthly (to be confirmed with infra). |
+| REL-01 | AVG and Admin Portal availability target 99.5% monthly. |
 | REL-02 | MBI calls: 5-second timeout, 1 retry. |
 | REL-03 | Registry sync asynchronous with retries after 1, 5 and 15 minutes, then `SYNC_FAILED` with manual retry. |
 | REL-04 | Trust-removing changes (suspend, delist, key revoke) reach AVG within 60 seconds, applied before the registry and mirror. |

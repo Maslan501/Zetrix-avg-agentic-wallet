@@ -65,7 +65,7 @@ Every service gets AVG's signed result both ways (x401 header via the agent, and
 | Allowed Claims (extra) | Multi-select. For Basic only, agent purpose is the only extra claim shown. | 0 | 8 | No |
 | Justification for Personal Claims | Mandatory if any personal claim is selected. No emojis. | 20 | 500 | No |
 | Callback URL | `https://`, host on the verified endpoint domain. | 12 | 2048 | Yes |
-| OpenAgenet Domains | One or more listing domains (list TBC with CAICT, OD-31). | 1 | 10 | Yes |
+| OpenAgenet Domains | One or more listing domains (list provided by OpenAgenet). | 1 | 10 | Yes |
 | Manifest / Schema / Artifact Link | `https://` link to the manifest, API schema or package. | 12 | 2048 | Yes |
 | Service Version | e.g. `1.0.0`. Letters, numbers and `.` `-`. Higher than current on an update. | 1 | 20 | Yes |
 | Output Description | What the service returns. | 10 | 500 | Yes |

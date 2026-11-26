@@ -2,10 +2,10 @@
 
 Phase 1 adds three new components (AVG, the Admin Portal and the Zetrix registry) on top of the existing Zetrix identity stack.
 
-<figure><img src="../.gitbook/assets/avg-architecture-phase1.svg" alt="Agentic Zetrix Wallet Phase 1 system architecture"><figcaption><p>Agentic Zetrix Wallet Phase 1 system architecture (PRD v1.3.1, section 1.6)</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/avg-architecture-phase1.svg" alt="Agentic Zetrix Wallet Phase 1 system architecture"><figcaption><p>Agentic Zetrix Wallet Phase 1 system architecture</p></figcaption></figure>
 
 {% hint style="info" %}
-Phase 1 uses ZVG / MyDigital ID as the only owner identity source. The Telco identity source is parked (OD-01) and is not shown. Every AVG sequence is drawn step by step in [AVG Flows](avg-flows.md).
+Phase 1 uses ZVG / MyDigital ID as the only owner identity source. Other identity sources are planned for later phases. Every AVG sequence is drawn step by step in [AVG Flows](avg-flows.md).
 {% endhint %}
 
 ## **Components**
@@ -57,6 +57,6 @@ Phase 1 uses ZVG / MyDigital ID as the only owner identity source. The Telco ide
 
 ## **Design Principles**
 
-* **AVG is central in Phase 1.** Zetrix hosts AVG for every service, so Zetrix can see which agent checked with which service. Logs are kept 30 days without claim values. A self-hosted AVG is a later design track (OD-23).
+* **AVG is central in Phase 1.** Zetrix hosts AVG for every service, so Zetrix can see which agent checked with which service. Logs are kept 30 days without claim values. A self-hosted AVG is a later design track.
 * **MBI is not part of verification.** AVG needs only the Zetrix chain to verify, which also enables a later local AVG.
 * **Trust changes first.** Suspend, delist and key revoke reach AVG within 60 seconds and are applied to AVG and the Service Cert before the registry and mirror.

@@ -1,4 +1,4 @@
-title AVG-03 AVG Verifies VP (OID4VP) and Delivers Signed Result · PRD 2.11 · US-13
+title AVG-03 AVG Verifies VP (OID4VP) and Delivers Signed Result
 participant Calling_Agent
 participant MBI
 participant AVG

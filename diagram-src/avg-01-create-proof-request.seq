@@ -1,4 +1,4 @@
-title AVG-01 Create Proof Request (x401 Challenge) · PRD 2.10 · US-12
+title AVG-01 Create Proof Request (x401 Challenge)
 participant Calling_Agent
 participant Service
 participant AVG

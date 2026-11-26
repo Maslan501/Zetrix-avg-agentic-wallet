@@ -1,4 +1,4 @@
-title AVG-07 Suspend, Reactivate or Delist a Service · PRD 2.8 · US-09
+title AVG-07 Suspend, Reactivate or Delist a Service
 participant Checker_Client_Admin_or_Super_Admin
 participant Admin_Portal_Backend
 participant AVG

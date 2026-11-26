@@ -42,7 +42,7 @@ The proof request as returned by [Create Proof Request](../api-specification/pro
 | --- | --- | --- |
 | Default (Basic) | `agentName` | Not asked |
 | Default (Verified) | `agentName`, `evidenceProvider`, `ownerVerified` | Not asked |
-| Other claims | `ownerName`, `ownerId`, `ownerPhoneNumber`, `dob`, `countryOfOrigin`, `agentPurpose`, `evidenceAssuranceLevel`, `evidenceDate` | Owner must agree in chat for this service, every time (no saved consent in Phase 1, OD-17). |
+| Other claims | `ownerName`, `ownerId`, `ownerPhoneNumber`, `dob`, `countryOfOrigin`, `agentPurpose`, `evidenceAssuranceLevel`, `evidenceDate` | Owner must agree in chat for this service, every time (no saved consent in Phase 1). |
 
 The consent question names the service using the name on its **Zetrix registry service card**, never the name inside the proof request, for example: *"QuickQuote Insurance API wants to see your name. Share it?"*
 

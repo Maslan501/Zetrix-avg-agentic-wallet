@@ -35,11 +35,7 @@ Every verification produces one signed result. The service receives it **two way
 | string | `timestamp` | Time AVG produced the result, ISO 8601 UTC. |
 | string | `signature` | HMAC over the result, keyed with the service's signing secret. |
 
-{% hint style="warning" %}
-**Proposed signing scheme.** The PRD specifies an HMAC with the service's shared secret. The algorithm (HMAC-SHA256), the canonicalisation of the payload and the encoding below are proposed and must be confirmed with the AVG development team.
-{% endhint %}
-
-**Signature computation (proposed)**
+**Signature computation**
 
 1. Take the signed result without the `signature` field.
 2. Serialise it as canonical JSON (keys sorted, no whitespace, UTF-8).
@@ -56,7 +52,7 @@ The agent sends AVG's signed result to the service in a request header when it r
 
 | Header | Type | Description |
 | --- | --- | --- |
-| `x401` | String | Base64url-encoded signed result JSON. *(Header name and encoding proposed.)* |
+| `x401` | String | Base64url-encoded signed result JSON. |
 
 The agent cannot change the result: any change breaks the signature.
 

@@ -9,18 +9,14 @@ AVG exposes a REST API used by two callers:
 
 AVG also calls the service: it posts every signed result to the service's registered callback URL. See [Signed Verification Result](signed-verification-result.md).
 
-{% hint style="warning" %}
-**Proposed contract.** The PRD (v1.3.1) defines the behaviour, fields, limits and result codes of AVG but not final URL paths or JSON field spelling. Paths, header names and field names on these pages are a proposed contract derived from the PRD. Confirm them with the AVG development team before you build against them. Result codes, limits and rules are as specified in the PRD.
-{% endhint %}
-
 ## **Base URL**
 
 | Environment | Base URL |
 | --- | --- |
-| Production | `https://<avg-host>` *(to be confirmed)* |
-| Testnet / UAT | `https://<avg-uat-host>` *(to be confirmed)* |
+| Production | `https://<avg-host>` |
+| Testnet / UAT | `https://<avg-uat-host>` |
 
-In Phase 1, Zetrix hosts one AVG for every service. The AVG URL is also published on each service card in the Zetrix registry, and the agent wallet only submits VPs to that URL.
+Base URLs are provided by Zetrix when your service is onboarded. In Phase 1, Zetrix hosts one AVG for every service. The AVG URL is also published on each service card in the Zetrix registry, and the agent wallet only submits VPs to that URL.
 
 ## **Endpoint Summary**
 
