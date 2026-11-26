@@ -4,18 +4,18 @@ Every flow that touches the Agent Verification Gateway. The flows fall into two 
 
 ## **Flow Index**
 
-| Diagram | Group | What it shows |
-| --- | --- | --- |
-| [AVG-01](#avg-01-create-proof-request) | Main | AVG creates the proof request (x401 challenge). |
-| [AVG-02](#avg-02-wallet-responds-with-selective-disclosure-vp) | Main | The wallet checks the request, gets consent and submits the VP to AVG. |
-| [AVG-03](#avg-03-avg-verifies-vp-and-delivers-the-signed-result) | Main | AVG checks the agent's VP, signs the result and sends it to the service. |
-| [AVG-04](#avg-04-approve-application-and-register-service-in-avg) | Admin to AVG | Registers a service in AVG and returns the API key and HMAC secret. |
-| [AVG-05](#avg-05-update-a-live-service-in-avg) | Admin to AVG | Updates a live service in AVG. |
-| [AVG-06](#avg-06-rotate-and-revoke-api-keys-and-signing-secret) | Admin to AVG | Rotates and revokes API keys and the signing secret. |
-| [AVG-07](#avg-07-suspend-reactivate-or-delist-a-service) | Admin to AVG | Suspends, reactivates or delists a service. |
-| [AVG-08](#avg-08-update-avg-first-then-publish-listing-and-mirror) | Admin to AVG | Updates the service status in AVG before publishing the listing. |
-| [AVG-09](#avg-09-issue-and-revoke-service-cert) | Admin to AVG | If cert revoke fails, the service stays blocked in AVG. |
-| [AVG-10](#avg-10-read-avg-verification-logs) | Admin to AVG | Reads the AVG verification logs. |
+| Diagram                                                                        | Group        | What it shows                                                            |
+| ------------------------------------------------------------------------------ | ------------ | ------------------------------------------------------------------------ |
+| [AVG-01](avg-flows.md#avg-01-create-proof-request)                             | Main         | AVG creates the proof request (x401 challenge).                          |
+| [AVG-02](avg-flows.md#avg-02-wallet-responds-with-selective-disclosure-vp)     | Main         | The wallet checks the request, gets consent and submits the VP to AVG.   |
+| [AVG-03](avg-flows.md#avg-03-avg-verifies-vp-and-delivers-the-signed-result)   | Main         | AVG checks the agent's VP, signs the result and sends it to the service. |
+| [AVG-04](avg-flows.md#avg-04-approve-application-and-register-service-in-avg)  | Admin to AVG | Registers a service in AVG and returns the API key and HMAC secret.      |
+| [AVG-05](avg-flows.md#avg-05-update-a-live-service-in-avg)                     | Admin to AVG | Updates a live service in AVG.                                           |
+| [AVG-06](avg-flows.md#avg-06-rotate-and-revoke-api-keys-and-signing-secret)    | Admin to AVG | Rotates and revokes API keys and the signing secret.                     |
+| [AVG-07](avg-flows.md#avg-07-suspend-reactivate-or-delist-a-service)           | Admin to AVG | Suspends, reactivates or delists a service.                              |
+| [AVG-08](avg-flows.md#avg-08-update-avg-first-then-publish-listing-and-mirror) | Admin to AVG | Updates the service status in AVG before publishing the listing.         |
+| [AVG-09](avg-flows.md#avg-09-issue-and-revoke-service-cert)                    | Admin to AVG | If cert revoke fails, the service stays blocked in AVG.                  |
+| [AVG-10](avg-flows.md#avg-10-read-avg-verification-logs)                       | Admin to AVG | Reads the AVG verification logs.                                         |
 
 ***
 
@@ -23,7 +23,7 @@ Every flow that touches the Agent Verification Gateway. The flows fall into two 
 
 ### AVG-01 Create Proof Request
 
-The service asks AVG, with its API key, for a single-use proof request. AVG validates the key, service status, rate limit and requested claims, then returns an OID4VP proof request with a 5-minute x401 challenge. See [Proof Request](../api-specification/proof-request.md).
+The service asks AVG, with its API key, for a single-use proof request. AVG validates the key, service status, rate limit and requested claims, then returns an OID4VP proof request with a 5-minute x401 challenge. See [Proof Request](/broken/pages/345a949b4c46831b94aff1ff24a4ab9788759f1d).
 
 <figure><img src="../.gitbook/assets/avg-01-create-proof-request.svg" alt="AVG-01 Create proof request"><figcaption><p>AVG-01 Create proof request (x401 challenge)</p></figcaption></figure>
 
@@ -35,7 +35,7 @@ The wallet trusts the proof request only if the service is in the Zetrix registr
 
 ### AVG-03 AVG Verifies VP and Delivers the Signed Result
 
-AVG verifies the VP against the Zetrix chain (MBI is not called), signs the result with the service's HMAC secret, returns it to the agent and posts the same result to the service's callback. See [Verifiable Presentation Submission](../api-specification/vp-submission.md) and [Signed Verification Result](../api-specification/signed-verification-result.md).
+AVG verifies the VP against the Zetrix chain (MBI is not called), signs the result with the service's HMAC secret, returns it to the agent and posts the same result to the service's callback. See [Verifiable Presentation Submission](/broken/pages/WhWgFs8kQorVYR3xSNKI) and [Signed Verification Result](../api-specification/signed-verification-result.md).
 
 <figure><img src="../.gitbook/assets/avg-03-verify-vp.svg" alt="AVG-03 AVG verifies VP and delivers signed result"><figcaption><p>AVG-03 AVG verifies VP (OID4VP) and delivers a signed result</p></figcaption></figure>
 
@@ -81,6 +81,6 @@ Service Certs are issued through SSIVC and MBI. If a revoke fails, the service s
 
 ### AVG-10 Read AVG Verification Logs
 
-Portal users read logs within their organisation scope; services read their own logs through the AVG log API. Claim values are never stored. See [Services and Verification Logs](../admin-portal/services-and-verification-logs.md) and [Verification Logs API](../api-specification/verification-logs.md).
+Portal users read logs within their organisation scope; services read their own logs through the AVG log API. Claim values are never stored. See [Services and Verification Logs](../admin-portal/services-and-verification-logs.md) and [Verification Logs API](/broken/pages/4852c37944f6af593b3fc94d12f9d6b7c1e7f588).
 
 <figure><img src="../.gitbook/assets/avg-10-verification-logs.svg" alt="AVG-10 Read AVG verification logs"><figcaption><p>AVG-10 Read AVG verification logs</p></figcaption></figure>

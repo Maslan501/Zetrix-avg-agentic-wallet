@@ -10,28 +10,28 @@ Services do not log in to the Admin Portal in Phase 1. Your registry controller 
 
 Give your registry controller the following so they can submit your onboarding application:
 
-| Item | Notes |
-| --- | --- |
-| Service details | Name, type, description, endpoint URL (HTTPS), version. |
-| Company details | Company name, registration number, country, technical contact. |
-| Domain proof | Add the DNS TXT record the portal generates: name `_zetrix-verify.<endpoint domain>`, value `zetrix-verify=<token>`. Keep it while the service is active. |
-| Required credential | `Basic only`, `Verified only`, or `Basic or Verified`. |
-| Allowed claims | Extra claims you need beyond the defaults, with a written justification for personal claims. |
-| Callback URL | HTTPS, on the verified endpoint domain. Mandatory. |
-| OpenAgenet listing data | Capability tags, use case examples, input / output description, manifest / schema link, OpenAgenet domains. |
-| Supporting documents | At least one (e.g. company registration certificate). PDF, JPG or PNG, up to 5 MB each, maximum 15 files. |
+| Item                    | Notes                                                                                                                                                     |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Service details         | Name, type, description, endpoint URL (HTTPS), version.                                                                                                   |
+| Company details         | Company name, registration number, country, technical contact.                                                                                            |
+| Domain proof            | Add the DNS TXT record the portal generates: name `_zetrix-verify.<endpoint domain>`, value `zetrix-verify=<token>`. Keep it while the service is active. |
+| Required credential     | `Basic only`, `Verified only`, or `Basic or Verified`.                                                                                                    |
+| Allowed claims          | Extra claims you need beyond the defaults, with a written justification for personal claims.                                                              |
+| Callback URL            | HTTPS, on the verified endpoint domain. Mandatory.                                                                                                        |
+| OpenAgenet listing data | Capability tags, use case examples, input / output description, manifest / schema link, OpenAgenet domains.                                               |
+| Supporting documents    | At least one (e.g. company registration certificate). PDF, JPG or PNG, up to 5 MB each, maximum 15 files.                                                 |
 
 After approval you receive, **once**:
 
-| Credential | Use |
-| --- | --- |
-| API key | Authenticates your calls to AVG. |
+| Credential          | Use                                                        |
+| ------------------- | ---------------------------------------------------------- |
+| API key             | Authenticates your calls to AVG.                           |
 | HMAC signing secret | Verifies the signed results AVG produces for your service. |
 
 ## **Integration Steps**
 
 1. **Receive the agent's call** (step 3). When an agent calls your service and you need to know who it is, ask AVG for a proof request.
-2. **Create a proof request** (step 4). Call [Create Proof Request](../api-specification/proof-request.md) with your API key, the credential you require and the claims you need.
+2. **Create a proof request** (step 4). Call [Create Proof Request](/broken/pages/345a949b4c46831b94aff1ff24a4ab9788759f1d) with your API key, the credential you require and the claims you need.
 3. **Return the proof request to the agent** (step 5). Pass it to the agent unchanged, for example in an x401 response.
 4. **Wait for the signed result** (step 8b / 8c). The agent submits its VP directly to AVG and forwards AVG's signed result to you in the x401 header. AVG also posts the same result to your callback URL.
 5. **Verify the HMAC** with your signing secret, check the `proofRequestId` is one you created, and check `result` is `true`. See [Signed Verification Result](../api-specification/signed-verification-result.md).

@@ -11,11 +11,20 @@
 * [API Specification](api-specification/README.md)
   * [Authentication](api-specification/authentication.md)
   * [Standard Response Format](api-specification/standard-response-format.md)
-  * [Proof Request](api-specification/proof-request.md)
-  * [Verifiable Presentation Submission](api-specification/vp-submission.md)
   * [Signed Verification Result](api-specification/signed-verification-result.md)
-  * [Verification Logs](api-specification/verification-logs.md)
   * [Result and Error Codes](api-specification/result-and-error-codes.md)
+  * ```yaml
+    type: builtin:openapi
+    props:
+      models: true
+      downloadLink: true
+      grouping: by-tag
+    dependencies:
+      spec:
+        ref:
+          kind: openapi
+          spec: Zetrix-avg-agentic-wallet
+    ```
 * [Agent Wallet](agent-wallet/README.md)
   * [Apply for Verified Agent Cert](agent-wallet/apply-verified-agent-cert.md)
   * [Discover Services](agent-wallet/discover-services.md)

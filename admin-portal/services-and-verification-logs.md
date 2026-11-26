@@ -4,37 +4,37 @@ The verification log is the record of every check AVG did for a service. Registr
 
 ## **Service List**
 
-| Item | Detail |
-| --- | --- |
+| Item    | Detail                                                                                                 |
+| ------- | ------------------------------------------------------------------------------------------------------ |
 | Columns | Service name, type, status, listing status, required credential, created date, last verification time. |
-| Filters | Status (All / Active / Suspended / Delisted), type, date range. |
-| Search | By name or endpoint (0 to 100 characters). |
-| Scope | Client users see their own company's services; Zetrix sees all. |
+| Filters | Status (All / Active / Suspended / Delisted), type, date range.                                        |
+| Search  | By name or endpoint (0 to 100 characters).                                                             |
+| Scope   | Client users see their own company's services; Zetrix sees all.                                        |
 
 ## **Verification Log**
 
 **Entry content**
 
-| Field | Detail |
-| --- | --- |
-| Timestamp | Time of the check. |
-| Proof request ID | — |
-| Service reference | The service's own reference, if sent. |
-| Result | Verified / Failed. |
-| Reason | Reason code with its description. See [Result and Error Codes](../api-specification/result-and-error-codes.md). |
-| Credential type | Basic / Verified. |
-| Claim names disclosed | Names only, never values. |
-| Holder identifier | Masked: first 12 + last 4 characters. |
-| Callback delivery status | e.g. Delivered, Callback failed. |
+| Field                    | Detail                                                                                                          |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| Timestamp                | Time of the check.                                                                                              |
+| Proof request ID         | —                                                                                                               |
+| Service reference        | The service's own reference, if sent.                                                                           |
+| Result                   | Verified / Failed.                                                                                              |
+| Reason                   | Reason code with its description. See [Result and Error Codes](../api-specification/result-and-error-codes.md). |
+| Credential type          | Basic / Verified.                                                                                               |
+| Claim names disclosed    | Names only, never values.                                                                                       |
+| Holder identifier        | Masked: first 12 + last 4 characters.                                                                           |
+| Callback delivery status | e.g. Delivered, Callback failed.                                                                                |
 
 **Filters**
 
-| Filter | Options |
-| --- | --- |
-| Date range | Last 30 days only. From cannot be after To. |
-| Service | All services, or one (all-services page only). |
-| Result | All / Verified / Failed. |
-| Reason | All, or one reason code. |
+| Filter     | Options                                        |
+| ---------- | ---------------------------------------------- |
+| Date range | Last 30 days only. From cannot be after To.    |
+| Service    | All services, or one (all-services page only). |
+| Result     | All / Verified / Failed.                       |
+| Reason     | All, or one reason code.                       |
 
 ## **Failed Checks Tile**
 
@@ -44,12 +44,12 @@ The Dashboard shows a **Failed checks today** tile for the services the user can
 
 * Claim values are never stored or shown in the portal or log API. They go only to the service inside AVG's signed result.
 * Logs are kept 30 days, then deleted by a daily clean-up job.
-* No CSV export in Phase 1. Services read their own logs through the [Verification Logs API](../api-specification/verification-logs.md).
+* No CSV export in Phase 1. Services read their own logs through the [Verification Logs API](/broken/pages/4852c37944f6af593b3fc94d12f9d6b7c1e7f588).
 
 ## **Messages**
 
-| Situation | Message |
-| --- | --- |
+| Situation          | Message                             |
+| ------------------ | ----------------------------------- |
 | Invalid date range | "From date must be before To date." |
 
 **Sequence Diagram**
