@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Client Accounts
 
 Registry controllers (clients) onboard services into the Zetrix registry and take responsibility for them. Zetrix creates each client account and its first Client Admin; the Client Admin then invites their own staff.

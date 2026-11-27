@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Roles and Permissions
 
 Each user has exactly one role and belongs to exactly one company (Zetrix or one registry controller). Role-based access and organisation scope are enforced on the backend for every API call, not only hidden in the UI.

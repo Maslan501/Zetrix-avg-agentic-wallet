@@ -3,7 +3,7 @@
 This page lists what a service (website, API, agent or MCP server) must do to verify calling agents through AVG.
 
 {% hint style="info" %}
-Services do not log in to the Admin Portal in Phase 1. Your registry controller (pilot: a telco) onboards your service and hands you the API key and signing secret.
+Services do not log in to the Zetrix Registry Admin in Phase 1. Your registry controller onboards your service and hands you the API key and signing secret.
 {% endhint %}
 
 ## **Before You Integrate**

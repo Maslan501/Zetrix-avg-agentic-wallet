@@ -56,7 +56,7 @@
   <line class="lp" x1="910" y1="345" x2="872" y2="345" marker-end="url(#p)"/>
   <!-- S2 Admin -> SSIVC (Service Cert) -->
   <path class="lp" d="M1160 330 H1192 V36 H435 V68" marker-end="url(#p)"/>
-  <text class="lblp" x="812" y="28" text-anchor="middle">S2  issue / revoke Service Cert (Admin Portal → SSIVC → MBI)</text>
+  <text class="lblp" x="812" y="28" text-anchor="middle">S2  issue / revoke Service Cert (Zetrix Registry Admin → SSIVC → MBI)</text>
   <!-- S2 Admin -> HSM -->
   <line class="lp" x1="1010" y1="392" x2="1010" y2="518" marker-end="url(#p)"/>
   <text class="lblp" x="1018" y="450">service did:zid +</text>
@@ -102,8 +102,8 @@
 
   <rect class="new" x="910" y="300" width="250" height="92" rx="8"/>
   <text class="tag" x="1035" y="292" fill="#4f46e5">NEW</text>
-  <text class="t" x="1035" y="326">Admin Portal</text>
-  <text class="s" x="1035" y="344">Registry controllers (telcos)</text>
+  <text class="t" x="1035" y="326">Zetrix Registry Admin</text>
+  <text class="s" x="1035" y="344">Registry controllers</text>
   <text class="s" x="1035" y="360">onboard / approve / suspend</text>
   <text class="s" x="1035" y="376">API key + HMAC secret</text>
 

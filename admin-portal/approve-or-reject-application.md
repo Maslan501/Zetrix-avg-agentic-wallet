@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Approve or Reject Application
 
 Approval is the trust decision. On approval the service is registered in AVG, gets its first API key and signing secret, receives a Service Cert, and is listed in the Zetrix registry. Maker and Checker must be different people.

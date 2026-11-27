@@ -1,6 +1,6 @@
 # Architecture
 
-Phase 1 adds three new components (AVG, the Admin Portal and the Zetrix registry) on top of the existing Zetrix identity stack.
+Phase 1 adds three new components (AVG, the Zetrix Registry Admin and the Zetrix registry) on top of the existing Zetrix identity stack.
 
 <figure><img src="../.gitbook/assets/avg-architecture-phase1.svg" alt="Agentic Zetrix Wallet Phase 1 system architecture"><figcaption><p>Agentic Zetrix Wallet Phase 1 system architecture</p></figcaption></figure>
 
@@ -14,10 +14,10 @@ Phase 1 uses ZVG / MyDigital ID as the only owner identity source. Other identit
 | --- | --- | --- |
 | Agent (Zetrix Agentic Wallet) | Extended | The owner's calling agent. Holds the Agent Cert, finds services, answers proof requests and forwards AVG's signed result to the service. Agent private keys stay in the Wallet BE HSM. |
 | AVG (Agent Verification Gateway) | New | OID4VP verifier. Checks the service API key, issues proof requests, verifies VPs against the Zetrix chain, signs results with HMAC and keeps 30-day logs. |
-| Admin Portal | New | Web portal where registry controllers (telcos) onboard and manage services, and Zetrix oversees all services. |
+| Zetrix Registry Admin | New | Web portal where registry controllers appointed by Zetrix onboard and manage services, and Zetrix oversees all services. |
 | Zetrix Registry | New | Source of truth for approved, active services (keyed by service did:zid). Mirrored on OpenAgenet (did:oan). |
 | MBI VC Service | Existing | Zetrix issuer of all Agent Certs and Service Certs. Builds VPs for the agent. Does not verify VPs. |
-| SSIVC | Existing, extended | VC issuance backend. Runs the owner session with ZVG and asks MBI to issue the Verified Agent Cert. New: issues and revokes Service Certs for the Admin Portal. |
+| SSIVC | Existing, extended | VC issuance backend. Runs the owner session with ZVG and asks MBI to issue the Verified Agent Cert. New: issues and revokes Service Certs for the Zetrix Registry Admin. |
 | ZVG | Existing | Zetrix Verification Gateway. Checks the human owner through MyDigital ID. |
 | Zetrix Chain | Existing | Holds issuer keys and credential status. AVG reads it during verification. |
 | Zetrix HSM | Existing | Creates and keeps each service's did:zid and did:oan private keys. They never leave it. |

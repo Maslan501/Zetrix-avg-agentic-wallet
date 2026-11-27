@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # API Keys and Signing Secret
 
 The API key is how AVG knows which service is calling; the signing secret is how the service checks AVG's results. Both must be replaceable without downtime and blockable in an emergency.

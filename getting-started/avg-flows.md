@@ -1,6 +1,6 @@
 # AVG Flows
 
-Every flow that touches the Agent Verification Gateway. The flows fall into two groups: the **main AVG flow** that runs on every agent call, and the **Admin Portal to AVG** flows that set up and control a service.
+Every flow that touches the Agent Verification Gateway. The flows fall into two groups: the **main AVG flow** that runs on every agent call, and the **Zetrix Registry Admin to AVG** flows that set up and control a service.
 
 ## **Flow Index**
 
@@ -41,29 +41,29 @@ AVG verifies the VP against the Zetrix chain (MBI is not called), signs the resu
 
 ***
 
-## Admin Portal to AVG (Setup and Control)
+## Zetrix Registry Admin to AVG (Setup and Control)
 
 ### AVG-04 Approve Application and Register Service in AVG
 
-On approval the Admin Portal registers the service in AVG, which returns the API key and HMAC signing secret (shown once). Zetrix creates the service DIDs in the HSM, SSIVC has MBI issue the Service Cert, and the listing is published. See [Approve or Reject Application](../admin-portal/approve-or-reject-application.md).
+On approval the Zetrix Registry Admin registers the service in AVG, which returns the API key and HMAC signing secret (shown once). Zetrix creates the service DIDs in the HSM, SSIVC has MBI issue the Service Cert, and the listing is published.
 
 <figure><img src="../.gitbook/assets/avg-04-approve-register.svg" alt="AVG-04 Approve application and register service in AVG"><figcaption><p>AVG-04 Approve application and register service in AVG</p></figcaption></figure>
 
 ### AVG-05 Update a Live Service in AVG
 
-An approved update changes the AVG registration while keeping the API key, secret and DIDs. A new Service Cert is issued only if the name or endpoint domain changed. See [Service Onboarding Application](../admin-portal/service-onboarding-application.md#update-a-live-service).
+An approved update changes the AVG registration while keeping the API key, secret and DIDs. A new Service Cert is issued only if the name or endpoint domain changed.
 
 <figure><img src="../.gitbook/assets/avg-05-update-live-service.svg" alt="AVG-05 Update a live service in AVG"><figcaption><p>AVG-05 Update a live service in AVG</p></figcaption></figure>
 
 ### AVG-06 Rotate and Revoke API Keys and Signing Secret
 
-Key and secret rotation keep the old value working for 24 hours; revocation takes effect in AVG within 60 seconds. See [API Keys and Signing Secret](../admin-portal/api-keys-and-signing-secret.md).
+Key and secret rotation keep the old value working for 24 hours; revocation takes effect in AVG within 60 seconds.
 
 <figure><img src="../.gitbook/assets/avg-06-api-keys-secret.svg" alt="AVG-06 Rotate and revoke API keys and signing secret"><figcaption><p>AVG-06 Rotate and revoke API keys and signing secret</p></figcaption></figure>
 
 ### AVG-07 Suspend, Reactivate or Delist a Service
 
-AVG is always updated first, so a suspended or delisted service is blocked even if the Service Cert or registry update fails. See [Suspend, Reactivate or Delist](../admin-portal/suspend-reactivate-delist.md).
+AVG is always updated first, so a suspended or delisted service is blocked even if the Service Cert or registry update fails.
 
 <figure><img src="../.gitbook/assets/avg-07-suspend-reactivate-delist.svg" alt="AVG-07 Suspend, reactivate or delist a service"><figcaption><p>AVG-07 Suspend, reactivate or delist a service</p></figcaption></figure>
 
@@ -81,6 +81,6 @@ Service Certs are issued through SSIVC and MBI. If a revoke fails, the service s
 
 ### AVG-10 Read AVG Verification Logs
 
-Portal users read logs within their organisation scope; services read their own logs through the AVG log API. Claim values are never stored. See [Services and Verification Logs](../admin-portal/services-and-verification-logs.md) and **Logs** under [API Specification](../api-specification/README.md).
+Zetrix Registry Admin users read logs within their organisation scope; services read their own logs through the AVG log API. Claim values are never stored. See **Logs** under [API Specification](../api-specification/README.md).
 
 <figure><img src="../.gitbook/assets/avg-10-verification-logs.svg" alt="AVG-10 Read AVG verification logs"><figcaption><p>AVG-10 Read AVG verification logs</p></figcaption></figure>

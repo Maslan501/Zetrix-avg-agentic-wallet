@@ -1,6 +1,6 @@
 # Email Notifications
 
-All Admin Portal emails are sent from **Zetrix Registry Admin Portal \<no-reply@zetrix.com\>**, in English, with times in UTC. They never include passwords, authenticator codes, 2FA keys, full API keys, signing secrets or claim values.
+All Zetrix Registry Admin emails are sent from **Zetrix Registry Admin Portal \<no-reply@zetrix.com\>**, in English, with times in UTC. They never include passwords, authenticator codes, 2FA keys, full API keys, signing secrets or claim values.
 
 | Email | Subject | Trigger | Recipient | Link |
 | --- | --- | --- | --- | --- |

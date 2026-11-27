@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Login and Account Security
 
 The Admin Portal is classified **High Risk** under the MyEG Password & Authentication Control Matrix v0.9. Access is strong and limited by role, because a wrong approval puts an untrusted service in front of agents.

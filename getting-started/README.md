@@ -6,5 +6,5 @@ This section explains how AVG fits into the Agentic Zetrix Wallet and how a serv
 | --- | --- |
 | [Architecture](architecture.md) | Systems in Phase 1 and how they connect. |
 | [End-to-End Flow](end-to-end-flow.md) | Getting an Agent Cert, onboarding a service, and an agent calling a service. |
-| [AVG Flows](avg-flows.md) | Every AVG sequence: the main verification flow and Admin Portal setup and control. |
+| [AVG Flows](avg-flows.md) | Every AVG sequence: the main verification flow and Zetrix Registry Admin setup and control. |
 | [Service Integration Quickstart](integration-quickstart.md) | The minimum a service must build to verify agents through AVG. |

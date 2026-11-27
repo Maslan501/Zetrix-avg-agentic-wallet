@@ -6,7 +6,7 @@ Searches the Zetrix registry for approved services by keyword and optional servi
 
 **Description**
 
-Agents need a trusted place to find services. Only services approved through the Admin Portal and currently Active appear. Each result tells the agent which credential and claims the service will ask for, so the agent can warn the owner early. In Phase 1 agents search the Zetrix registry (the source of truth); searching OpenAgenet directly is not in Phase 1.
+Agents need a trusted place to find services. Only services approved through the Zetrix Registry Admin and currently Active appear. Each result tells the agent which credential and claims the service will ask for, so the agent can warn the owner early. In Phase 1 agents search the Zetrix registry (the source of truth); searching OpenAgenet directly is not in Phase 1.
 
 **Wallet Tool**
 
@@ -51,7 +51,7 @@ Agents need a trusted place to find services. Only services approved through the
             "description": "Instant motor insurance quotations.",
             "requiredCredential": "VERIFIED",
             "requestedClaims": ["agentName", "ownerVerified", "evidenceProvider", "ownerName"],
-            "registryController": "Omantel",
+            "registryController": "Example Registry Controller",
             "serviceCertId": "<service-cert-vc-id>",
             "avgUrl": "https://<avg-host>"
         }

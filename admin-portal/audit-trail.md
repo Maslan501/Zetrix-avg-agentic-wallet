@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Audit Trail
 
 The audit trail records who did what in the Admin Portal, when and from where. It covers Admin Portal actions only; agent verification checks are in the verification log.

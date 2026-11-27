@@ -1,6 +1,6 @@
 title AVG-05 Update a Live Service in AVG
 participant Maker_or_Client_Admin
-participant Admin_Portal_Backend
+participant Zetrix_Registry_Admin
 participant DNS_Resolver
 participant Checker_or_Client_Admin
 participant AVG
@@ -10,29 +10,29 @@ participant Zetrix_HSM
 participant Zetrix_Registry
 participant OpenAgenet
 ==SUBMIT UPDATE==
-Maker_or_Client_Admin->Admin_Portal_Backend:submit update (changed fields, higher version)
-Admin_Portal_Backend->Admin_Portal_Backend:validate fields; version > current; type unchanged; no other pending update
+Maker_or_Client_Admin->Zetrix_Registry_Admin:submit update (changed fields, higher version)
+Zetrix_Registry_Admin->Zetrix_Registry_Admin:validate fields; version > current; type unchanged; no other pending update
 alt ENDPOINT DOMAIN CHANGED
-Admin_Portal_Backend->DNS_Resolver:check TXT record on new domain
-DNS_Resolver-->Admin_Portal_Backend:found
+Zetrix_Registry_Admin->DNS_Resolver:check TXT record on new domain
+DNS_Resolver-->Zetrix_Registry_Admin:found
 end
-Admin_Portal_Backend-->Maker_or_Client_Admin:update pending approval; service keeps running on current details
+Zetrix_Registry_Admin-->Maker_or_Client_Admin:update pending approval; service keeps running on current details
 ==APPROVE UPDATE==
-Checker_or_Client_Admin->Admin_Portal_Backend:approve update
-Admin_Portal_Backend->Admin_Portal_Backend:approver is not submitter
-Admin_Portal_Backend->AVG:update registration (credential, claims, callback)
-AVG-->Admin_Portal_Backend:ok (API key, secret, did:zid, did:oan unchanged)
+Checker_or_Client_Admin->Zetrix_Registry_Admin:approve update
+Zetrix_Registry_Admin->Zetrix_Registry_Admin:approver is not submitter
+Zetrix_Registry_Admin->AVG:update registration (credential, claims, callback)
+AVG-->Zetrix_Registry_Admin:ok (API key, secret, did:zid, did:oan unchanged)
 alt SERVICE NAME OR ENDPOINT DOMAIN CHANGED
-Admin_Portal_Backend->SSIVC:issue new Service Cert, revoke old
+Zetrix_Registry_Admin->SSIVC:issue new Service Cert, revoke old
 SSIVC->MBI:issue new VC, revoke old VC
 MBI-->SSIVC:new Service Cert ID
-SSIVC-->Admin_Portal_Backend:new Service Cert ID
+SSIVC-->Zetrix_Registry_Admin:new Service Cert ID
 end
-Admin_Portal_Backend->Zetrix_Registry:update listing (new version)
-Admin_Portal_Backend->Zetrix_HSM:sign new DID document version with did:oan key
-Zetrix_HSM-->Admin_Portal_Backend:proof
-Admin_Portal_Backend->OpenAgenet:submit new package version (async, retry)
-Admin_Portal_Backend-->Checker_or_Client_Admin:update live
+Zetrix_Registry_Admin->Zetrix_Registry:update listing (new version)
+Zetrix_Registry_Admin->Zetrix_HSM:sign new DID document version with did:oan key
+Zetrix_HSM-->Zetrix_Registry_Admin:proof
+Zetrix_Registry_Admin->OpenAgenet:submit new package version (async, retry)
+Zetrix_Registry_Admin-->Checker_or_Client_Admin:update live
 alt UPDATE REJECTED
-Admin_Portal_Backend-->Maker_or_Client_Admin:rejected with reason; service unchanged
+Zetrix_Registry_Admin-->Maker_or_Client_Admin:rejected with reason; service unchanged
 end

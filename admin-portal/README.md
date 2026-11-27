@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Admin Portal
 
 The Zetrix Registry Admin Portal is the web portal where registry controllers (pilot: telcos such as Omantel and Airtel Africa) onboard and manage services, and where Zetrix oversees every service. It controls which services can verify agents through AVG and which services appear in the Zetrix registry.

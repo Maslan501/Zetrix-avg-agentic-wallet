@@ -1,13 +1,13 @@
 title AVG-08 Update AVG First, Then Publish Listing and Mirror
-participant Admin_Portal_Backend
+participant Zetrix_Registry_Admin
 participant AVG
 participant Zetrix_HSM
 participant Sync_Queue
 participant Zetrix_Registry
 participant OpenAgenet_Registrar
 ==SYNC LISTING==
-Admin_Portal_Backend->AVG:update service status first (order safety)
-Admin_Portal_Backend-->Sync_Queue:listing event (create / new version / hide / show / remove)
+Zetrix_Registry_Admin->AVG:update service status first (order safety)
+Zetrix_Registry_Admin-->Sync_Queue:listing event (create / new version / hide / show / remove)
 Sync_Queue->Zetrix_Registry:apply (source of truth, within 60 s)
 Zetrix_Registry-->Sync_Queue:ok
 Sync_Queue->Sync_Queue:build did:oan DID document (keys, endpoint, oanMetadata)
@@ -15,8 +15,8 @@ Sync_Queue->Zetrix_HSM:sign with service did:oan key (Zetrix is controller)
 Zetrix_HSM-->Sync_Queue:proof
 Sync_Queue->OpenAgenet_Registrar:submit package / status (Registrar API)
 OpenAgenet_Registrar-->Sync_Queue:accepted
-Sync_Queue-->Admin_Portal_Backend:registry SYNCED, mirror SYNCED
+Sync_Queue-->Zetrix_Registry_Admin:registry SYNCED, mirror SYNCED
 alt REGISTRY OR MIRROR CALL FAILS
 Sync_Queue->Sync_Queue:retry after 1, 5, 15 min
-Sync_Queue-->Admin_Portal_Backend:SYNC_FAILED shown in portal, manual Retry (no email; mirror failure never changes Zetrix listing)
+Sync_Queue-->Zetrix_Registry_Admin:SYNC_FAILED shown in Zetrix Registry Admin, manual Retry (no email; mirror failure never changes Zetrix listing)
 end

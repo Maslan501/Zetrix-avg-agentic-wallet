@@ -1,6 +1,6 @@
 # Authentication
 
-AVG uses two credentials per service, both created when the service is approved in the Admin Portal and shown **once** to the approver.
+AVG uses two credentials per service, both created when the service is approved in the Zetrix Registry Admin and shown **once** to the approver.
 
 | Credential | Purpose | Storage at AVG |
 | --- | --- | --- |
@@ -46,7 +46,7 @@ Authorization: Bearer YOUR_AVG_API_KEY
 | Last key | Revoking the only active key is allowed, but the service stops working until a new key is created. |
 | Status values | `Active`, `Expiring`, `Revoked` |
 
-Key rotation and revocation are done in the Admin Portal by a Checker, Client Admin or Zetrix Super Admin. See [API Keys and Signing Secret](../admin-portal/api-keys-and-signing-secret.md).
+Key rotation and revocation are done in the Zetrix Registry Admin by a Checker, Client Admin or Zetrix Super Admin.
 
 ***
 

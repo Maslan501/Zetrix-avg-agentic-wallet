@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # User Management
 
 One portal serves Zetrix and every registry controller. Zetrix manages all users; a Client Admin manages only their own company's staff and never sees other companies or Zetrix staff.

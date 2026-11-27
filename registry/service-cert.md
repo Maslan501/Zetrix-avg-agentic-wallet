@@ -10,7 +10,7 @@ Agents verifying a service's Service Cert is **not** in Phase 1.
 
 | Rule | Detail |
 | --- | --- |
-| Issuer | MBI issues the Service Cert. The Admin Portal backend does not call MBI directly: it asks SSIVC, and SSIVC calls MBI. The backend authenticates to SSIVC with a service-to-service credential kept in the Zetrix key store. |
+| Issuer | MBI issues the Service Cert. The Zetrix Registry Admin backend does not call MBI directly: it asks SSIVC, and SSIVC calls MBI. The backend authenticates to SSIVC with a service-to-service credential kept in the Zetrix key store. |
 | DID vs cert | The service keeps its did:zid when its cert is revoked and a new one is issued. |
 | Content | Service did:zid (subject) and did:oan, service name, endpoint domain, service type, registry controller name (approver), approval date, `validUntil`. |
 | Approver visibility | The approver name is shown in the portal to Zetrix users only. |
@@ -37,10 +37,8 @@ Agents verifying a service's Service Cert is **not** in Phase 1.
 | --- | --- |
 | Issue fails | Service still Active in AVG; cert status "issue failed" with Retry. |
 | Revoke fails | Service stays suspended / delisted in AVG (calls still rejected); cert status "revoke failed" with Retry. |
-| Renewal fails | Portal shows "renewal failed" with Retry. |
+| Renewal fails | Zetrix Registry Admin shows "renewal failed" with Retry. |
 
 **Sequence Diagram**
 
 <figure><img src="../.gitbook/assets/avg-09-service-cert.svg" alt="Issue and revoke Service Cert"><figcaption><p>Issue and revoke Service Cert for approved services</p></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/flow-us-17.png" alt="Service Cert process flow"><figcaption><p>Process flow: Service Cert</p></figcaption></figure>

@@ -1,29 +1,29 @@
 title AVG-09 Issue and Revoke Service Cert
-participant Admin_Portal_Backend
+participant Zetrix_Registry_Admin
 participant AVG
 participant SSIVC
 participant MBI
 participant Zetrix_Registry
 ==ISSUE ON APPROVAL==
-Admin_Portal_Backend->SSIVC:issue Service Cert (subject = service did:zid, approver = registry controller)
+Zetrix_Registry_Admin->SSIVC:issue Service Cert (subject = service did:zid, approver = registry controller)
 SSIVC->MBI:issue VC with Service Cert template
 MBI-->SSIVC:Service Cert ID, validUntil (issue + 12 months)
-SSIVC-->Admin_Portal_Backend:Service Cert ID, validUntil
-Admin_Portal_Backend-->Zetrix_Registry:add Service Cert ID to listing
+SSIVC-->Zetrix_Registry_Admin:Service Cert ID, validUntil
+Zetrix_Registry_Admin-->Zetrix_Registry:add Service Cert ID to listing
 ==REVOKE ON SUSPEND OR DELIST==
-Admin_Portal_Backend->AVG:block service first
-Admin_Portal_Backend->SSIVC:revoke Service Cert
+Zetrix_Registry_Admin->AVG:block service first
+Zetrix_Registry_Admin->SSIVC:revoke Service Cert
 SSIVC->MBI:revoke VC
 MBI-->SSIVC:revoked (status on Zetrix chain)
-SSIVC-->Admin_Portal_Backend:revoked
+SSIVC-->Zetrix_Registry_Admin:revoked
 ==REACTIVATE OR RENEW (30 DAYS BEFORE EXPIRY)==
-Admin_Portal_Backend->SSIVC:issue new Service Cert
+Zetrix_Registry_Admin->SSIVC:issue new Service Cert
 SSIVC->MBI:issue VC with Service Cert template
 MBI-->SSIVC:new Service Cert ID
-SSIVC-->Admin_Portal_Backend:new Service Cert ID (on renewal, old cert revoked)
+SSIVC-->Zetrix_Registry_Admin:new Service Cert ID (on renewal, old cert revoked)
 alt ISSUE OR RENEWAL FAILS
-Admin_Portal_Backend->Admin_Portal_Backend:service stays Active in AVG; issue / renewal failed, Retry
+Zetrix_Registry_Admin->Zetrix_Registry_Admin:service stays Active in AVG; issue / renewal failed, Retry
 end
 alt REVOKE FAILS
-Admin_Portal_Backend->Admin_Portal_Backend:service stays blocked in AVG; revoke failed, Retry
+Zetrix_Registry_Admin->Zetrix_Registry_Admin:service stays blocked in AVG; revoke failed, Retry
 end

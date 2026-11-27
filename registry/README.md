@@ -1,10 +1,10 @@
 # Registry and Service Cert
 
-Every approved service gets two identifiers and a credential, all created by Zetrix on approval:
+To onboard a service into the Zetrix Registry, it needs to pass through the **Zetrix Registry Admin**, where a registry controller appointed by Zetrix reviews and approves it. Every approved service then gets two identifiers and a credential:
 
 | Item | What it is | Analogy |
 | --- | --- | --- |
-| Service **did:zid** | The service's identity on Zetrix. Key of the Zetrix registry and subject of the Service Cert. | IC number |
+| Service **did:zid** | The service's identity on Zetrix. Key of the Zetrix registry and subject of the Service Cert. | ID number |
 | Service **did:oan** | The service's identity on OpenAgenet: `did:oan:<routing code>:<suffix>`. | Passport for OpenAgenet |
 | **Service Cert** | A VC issued by MBI to the did:zid, naming the registry controller that approved the service. | Licence |
 

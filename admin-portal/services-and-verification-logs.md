@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Services and Verification Logs
 
 The verification log is the record of every check AVG did for a service. Registry controllers and Zetrix use it to fix failing integrations, spot abuse or unusual volume, and answer audit questions.

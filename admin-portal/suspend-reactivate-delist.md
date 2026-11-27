@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Suspend, Reactivate or Delist
 
 Services can go bad after approval. Suspension is a fast, reversible stop. Delisting is permanent.

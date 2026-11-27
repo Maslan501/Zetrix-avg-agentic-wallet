@@ -58,7 +58,7 @@ Template Expiry is `No` for all three; VC expiry is set per VC at issue. For the
 
 | Key (attribute name) | Description | Template rules |
 | --- | --- | --- |
-| `credentialSubject.id` *(VC field)* | The service's did:zid, created by Zetrix on approval. | Set by MBI at issue. |
+| `credentialSubject.id` *(VC field)* | The service's did:zid, created when a registry controller appointed by Zetrix approves the service. | Set by MBI at issue. |
 | `validUntil` *(VC field)* | Issue date + 12 months; renewed 30 days before expiry while Active. | Set by SSIVC at issue. |
 | `serviceDidOan` (Service DID OAN) | The service's did:oan. | Mandatory: Yes · Visibility: Show |
 | `serviceName` (Service Name) | From the approved application. | Mandatory: Yes · Visibility: Show |
@@ -71,9 +71,9 @@ Template Expiry is `No` for all three; VC expiry is set per VC at issue. For the
 
 ## Claim Key Reference
 
-Mapping between the portal labels and the claim keys used in the API.
+Mapping between the onboarding labels and the claim keys used in the API.
 
-| Portal label | Claim key | Basic | Verified | Type |
+| Label | Claim key | Basic | Verified | Type |
 | --- | --- | --- | --- | --- |
 | agent name | `agentName` | Yes | Yes | Default |
 | owner-verified flag | `ownerVerified` | — | Yes | Default (Verified) |

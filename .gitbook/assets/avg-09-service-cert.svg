@@ -1,55 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1187" height="1256" viewBox="0 0 1187 1256" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1191" height="1256" viewBox="0 0 1191 1256" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
 <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1f2937"/></marker></defs>
 <rect width="100%" height="100%" fill="#ffffff"/>
-<line x1="123" y1="114" x2="123" y2="1188" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/><line x1="315.15" y1="114" x2="315.15" y2="1188" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/><line x1="507.3" y1="114" x2="507.3" y2="1188" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/><line x1="699.45" y1="114" x2="699.45" y2="1188" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/><line x1="891.6" y1="114" x2="891.6" y2="1188" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/>
-<rect x="26" y="1066" width="1135" height="98" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
-<rect x="26" y="948" width="1135" height="98" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
-<line x1="20" y1="150" x2="1167" y2="150" stroke="#4f46e5" stroke-width="1.2" stroke-dasharray="2 3"/><rect x="516.6" y="137" width="153.8" height="26" rx="13" fill="#4f46e5"/><text x="593.5" y="155" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">ISSUE ON APPROVAL</text>
-<text x="315.15" y="184" font-size="13" text-anchor="middle" fill="#1f2937">issue Service Cert (subject = service did:zid,</text>
-<text x="315.15" y="200" font-size="13" text-anchor="middle" fill="#1f2937">approver = registry controller)</text>
-<line x1="123" y1="209" x2="504.3" y2="209" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
-<text x="603.375" y="241" font-size="13" text-anchor="middle" fill="#1f2937">issue VC with Service</text>
-<text x="603.375" y="257" font-size="13" text-anchor="middle" fill="#1f2937">Cert template</text>
-<line x1="507.3" y1="266" x2="696.45" y2="266" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
-<text x="603.375" y="298" font-size="13" text-anchor="middle" fill="#1f2937">Service Cert ID,</text>
-<text x="603.375" y="314" font-size="13" text-anchor="middle" fill="#1f2937">validUntil (issue + 12</text>
-<text x="603.375" y="330" font-size="13" text-anchor="middle" fill="#1f2937">months)</text>
-<line x1="699.45" y1="339" x2="510.3" y2="339" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
-<text x="315.15" y="371" font-size="13" text-anchor="middle" fill="#1f2937">Service Cert ID, validUntil</text>
-<line x1="507.3" y1="380" x2="126" y2="380" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
-<text x="507.3" y="412" font-size="13" text-anchor="middle" fill="#1f2937">add Service Cert ID to listing</text>
-<line x1="123" y1="421" x2="888.6" y2="421" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
-<line x1="20" y1="463" x2="1167" y2="463" stroke="#4f46e5" stroke-width="1.2" stroke-dasharray="2 3"/><rect x="479.6" y="450" width="227.8" height="26" rx="13" fill="#4f46e5"/><text x="593.5" y="468" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">REVOKE ON SUSPEND OR DELIST</text>
-<text x="219.075" y="497" font-size="13" text-anchor="middle" fill="#1f2937">block service first</text>
-<line x1="123" y1="506" x2="312.15" y2="506" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
-<text x="315.15" y="538" font-size="13" text-anchor="middle" fill="#1f2937">revoke Service Cert</text>
-<line x1="123" y1="547" x2="504.3" y2="547" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
-<text x="603.375" y="579" font-size="13" text-anchor="middle" fill="#1f2937">revoke VC</text>
-<line x1="507.3" y1="588" x2="696.45" y2="588" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
-<text x="603.375" y="620" font-size="13" text-anchor="middle" fill="#1f2937">revoked (status on</text>
-<text x="603.375" y="636" font-size="13" text-anchor="middle" fill="#1f2937">Zetrix chain)</text>
-<line x1="699.45" y1="645" x2="510.3" y2="645" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
-<text x="315.15" y="677" font-size="13" text-anchor="middle" fill="#1f2937">revoked</text>
-<line x1="507.3" y1="686" x2="126" y2="686" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
-<line x1="20" y1="728" x2="1167" y2="728" stroke="#4f46e5" stroke-width="1.2" stroke-dasharray="2 3"/><rect x="420.4" y="715" width="346.2" height="26" rx="13" fill="#4f46e5"/><text x="593.5" y="733" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">REACTIVATE OR RENEW (30 DAYS BEFORE EXPIRY)</text>
-<text x="315.15" y="762" font-size="13" text-anchor="middle" fill="#1f2937">issue new Service Cert</text>
-<line x1="123" y1="771" x2="504.3" y2="771" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
-<text x="603.375" y="803" font-size="13" text-anchor="middle" fill="#1f2937">issue VC with Service</text>
-<text x="603.375" y="819" font-size="13" text-anchor="middle" fill="#1f2937">Cert template</text>
-<line x1="507.3" y1="828" x2="696.45" y2="828" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
-<text x="603.375" y="860" font-size="13" text-anchor="middle" fill="#1f2937">new Service Cert ID</text>
-<line x1="699.45" y1="869" x2="510.3" y2="869" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
-<text x="315.15" y="901" font-size="13" text-anchor="middle" fill="#1f2937">new Service Cert ID (on renewal, old cert revoked)</text>
-<line x1="507.3" y1="910" x2="126" y2="910" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
-<text x="161" y="986" font-size="13" fill="#1f2937">service stays Active in AVG; issue /</text>
-<text x="161" y="1002" font-size="13" fill="#1f2937">renewal failed, Retry</text>
-<path d="M123 976 h28 v38 h-24" fill="none" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
+<line x1="126.45" y1="114" x2="126.45" y2="1188" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/><line x1="318.6" y1="114" x2="318.6" y2="1188" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/><line x1="510.75" y1="114" x2="510.75" y2="1188" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/><line x1="702.9000000000001" y1="114" x2="702.9000000000001" y2="1188" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/><line x1="895.0500000000001" y1="114" x2="895.0500000000001" y2="1188" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/>
+<rect x="26" y="1066" width="1139" height="98" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+<rect x="26" y="948" width="1139" height="98" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+<line x1="20" y1="150" x2="1171" y2="150" stroke="#4f46e5" stroke-width="1.2" stroke-dasharray="2 3"/><rect x="518.6" y="137" width="153.8" height="26" rx="13" fill="#4f46e5"/><text x="595.5" y="155" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">ISSUE ON APPROVAL</text>
+<text x="318.6" y="184" font-size="13" text-anchor="middle" fill="#1f2937">issue Service Cert (subject = service did:zid,</text>
+<text x="318.6" y="200" font-size="13" text-anchor="middle" fill="#1f2937">approver = registry controller)</text>
+<line x1="126.45" y1="209" x2="507.75" y2="209" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="606.825" y="241" font-size="13" text-anchor="middle" fill="#1f2937">issue VC with Service</text>
+<text x="606.825" y="257" font-size="13" text-anchor="middle" fill="#1f2937">Cert template</text>
+<line x1="510.75" y1="266" x2="699.9000000000001" y2="266" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="606.825" y="298" font-size="13" text-anchor="middle" fill="#1f2937">Service Cert ID,</text>
+<text x="606.825" y="314" font-size="13" text-anchor="middle" fill="#1f2937">validUntil (issue + 12</text>
+<text x="606.825" y="330" font-size="13" text-anchor="middle" fill="#1f2937">months)</text>
+<line x1="702.9000000000001" y1="339" x2="513.75" y2="339" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<text x="318.6" y="371" font-size="13" text-anchor="middle" fill="#1f2937">Service Cert ID, validUntil</text>
+<line x1="510.75" y1="380" x2="129.45" y2="380" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<text x="510.75000000000006" y="412" font-size="13" text-anchor="middle" fill="#1f2937">add Service Cert ID to listing</text>
+<line x1="126.45" y1="421" x2="892.0500000000001" y2="421" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<line x1="20" y1="463" x2="1171" y2="463" stroke="#4f46e5" stroke-width="1.2" stroke-dasharray="2 3"/><rect x="481.6" y="450" width="227.8" height="26" rx="13" fill="#4f46e5"/><text x="595.5" y="468" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">REVOKE ON SUSPEND OR DELIST</text>
+<text x="222.525" y="497" font-size="13" text-anchor="middle" fill="#1f2937">block service first</text>
+<line x1="126.45" y1="506" x2="315.6" y2="506" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="318.6" y="538" font-size="13" text-anchor="middle" fill="#1f2937">revoke Service Cert</text>
+<line x1="126.45" y1="547" x2="507.75" y2="547" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="606.825" y="579" font-size="13" text-anchor="middle" fill="#1f2937">revoke VC</text>
+<line x1="510.75" y1="588" x2="699.9000000000001" y2="588" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="606.825" y="620" font-size="13" text-anchor="middle" fill="#1f2937">revoked (status on</text>
+<text x="606.825" y="636" font-size="13" text-anchor="middle" fill="#1f2937">Zetrix chain)</text>
+<line x1="702.9000000000001" y1="645" x2="513.75" y2="645" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<text x="318.6" y="677" font-size="13" text-anchor="middle" fill="#1f2937">revoked</text>
+<line x1="510.75" y1="686" x2="129.45" y2="686" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<line x1="20" y1="728" x2="1171" y2="728" stroke="#4f46e5" stroke-width="1.2" stroke-dasharray="2 3"/><rect x="422.4" y="715" width="346.2" height="26" rx="13" fill="#4f46e5"/><text x="595.5" y="733" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">REACTIVATE OR RENEW (30 DAYS BEFORE EXPIRY)</text>
+<text x="318.6" y="762" font-size="13" text-anchor="middle" fill="#1f2937">issue new Service Cert</text>
+<line x1="126.45" y1="771" x2="507.75" y2="771" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="606.825" y="803" font-size="13" text-anchor="middle" fill="#1f2937">issue VC with Service</text>
+<text x="606.825" y="819" font-size="13" text-anchor="middle" fill="#1f2937">Cert template</text>
+<line x1="510.75" y1="828" x2="699.9000000000001" y2="828" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="606.825" y="860" font-size="13" text-anchor="middle" fill="#1f2937">new Service Cert ID</text>
+<line x1="702.9000000000001" y1="869" x2="513.75" y2="869" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<text x="318.6" y="901" font-size="13" text-anchor="middle" fill="#1f2937">new Service Cert ID (on renewal, old cert revoked)</text>
+<line x1="510.75" y1="910" x2="129.45" y2="910" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<text x="164.45" y="986" font-size="13" fill="#1f2937">service stays Active in AVG; issue /</text>
+<text x="164.45" y="1002" font-size="13" fill="#1f2937">renewal failed, Retry</text>
+<path d="M126.45 976 h28 v38 h-24" fill="none" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
 <path d="M26 948 h44 v14 l-8 8 h-36 z" fill="#94a3b8"/><text x="34" y="964" font-size="12" font-weight="700" fill="#ffffff">alt</text><text x="80" y="964" font-size="12" font-weight="700" fill="#1f2937">[ISSUE OR RENEWAL FAILS]</text>
-<text x="161" y="1104" font-size="13" fill="#1f2937">service stays blocked in AVG; revoke</text>
-<text x="161" y="1120" font-size="13" fill="#1f2937">failed, Retry</text>
-<path d="M123 1094 h28 v38 h-24" fill="none" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="164.45" y="1104" font-size="13" fill="#1f2937">service stays blocked in AVG; revoke</text>
+<text x="164.45" y="1120" font-size="13" fill="#1f2937">failed, Retry</text>
+<path d="M126.45 1094 h28 v38 h-24" fill="none" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
 <path d="M26 1066 h44 v14 l-8 8 h-36 z" fill="#94a3b8"/><text x="34" y="1082" font-size="12" font-weight="700" fill="#ffffff">alt</text><text x="80" y="1082" font-size="12" font-weight="700" fill="#1f2937">[REVOKE FAILS]</text>
 <text x="40" y="44" font-size="18" font-weight="700" fill="#1f2937">AVG-09 Issue and Revoke Service Cert</text>
-<rect x="40" y="76" width="166" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="123" y="100" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">Admin Portal Backend</text><rect x="260.15" y="76" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="315.15" y="100" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">AVG</text><rect x="452.3" y="76" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="507.3" y="100" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">SSIVC</text><rect x="644.45" y="76" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="699.45" y="100" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">MBI</text><rect x="825.85" y="76" width="131.5" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="891.6" y="100" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">Zetrix Registry</text>
-<rect x="40" y="1188" width="166" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="123" y="1212" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">Admin Portal Backend</text><rect x="260.15" y="1188" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="315.15" y="1212" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">AVG</text><rect x="452.3" y="1188" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="507.3" y="1212" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">SSIVC</text><rect x="644.45" y="1188" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="699.45" y="1212" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">MBI</text><rect x="825.85" y="1188" width="131.5" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="891.6" y="1212" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">Zetrix Registry</text>
+<rect x="40" y="76" width="172.9" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="126.45" y="100" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">Zetrix Registry Admin</text><rect x="263.6" y="76" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="318.6" y="100" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">AVG</text><rect x="455.75" y="76" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="510.75" y="100" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">SSIVC</text><rect x="647.9000000000001" y="76" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="702.9000000000001" y="100" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">MBI</text><rect x="829.3000000000001" y="76" width="131.5" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="895.0500000000001" y="100" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">Zetrix Registry</text>
+<rect x="40" y="1188" width="172.9" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="126.45" y="1212" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">Zetrix Registry Admin</text><rect x="263.6" y="1188" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="318.6" y="1212" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">AVG</text><rect x="455.75" y="1188" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="510.75" y="1212" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">SSIVC</text><rect x="647.9000000000001" y="1188" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="702.9000000000001" y="1212" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">MBI</text><rect x="829.3000000000001" y="1188" width="131.5" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="895.0500000000001" y="1212" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">Zetrix Registry</text>
 </svg>

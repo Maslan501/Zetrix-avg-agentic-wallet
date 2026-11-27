@@ -1,8 +1,8 @@
 # End-to-End Flow
 
-The Phase 1 happy path: an owner gets a Verified Agent Cert, a service is onboarded, and the agent is verified when it calls the service.
+Phase 1 end to end: an owner gets a Verified Agent Cert, a service is onboarded, and the agent is verified when it calls the service.
 
-<figure><img src="../.gitbook/assets/avg-happy-path.png" alt="Phase 1 happy path flow"><figcaption><p>Phase 1 happy path</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/avg-happy-path.png" alt="Phase 1 end-to-end flow"><figcaption><p>Phase 1 end-to-end flow</p></figcaption></figure>
 
 ***
 
@@ -21,8 +21,6 @@ See [Apply for Verified Agent Cert](../agent-wallet/apply-verified-agent-cert.md
 A registry controller Maker submits the service with domain proof and documents. A different Checker or Client Admin approves it. On approval the service is registered in AVG, receives its API key, signing secret and Service Cert, and is listed in the Zetrix registry and mirrored on OpenAgenet.
 
 <figure><img src="../.gitbook/assets/flow-e2e-2-service-onboarding.png" alt="Service onboarding to go-live"><figcaption><p>Operational Flow 2: Service onboarding to go-live</p></figcaption></figure>
-
-See [Service Onboarding Application](../admin-portal/service-onboarding-application.md) and [Approve or Reject Application](../admin-portal/approve-or-reject-application.md).
 
 ***
 

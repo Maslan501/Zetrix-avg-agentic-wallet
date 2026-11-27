@@ -10,10 +10,10 @@
 | AVG | Agent Verification Gateway. The gateway services integrate with using an API key. Issues proof requests and verifies agent VPs itself, using issuer keys and VC status on the Zetrix chain. |
 | MBI | Malaysia Blockchain Infrastructure VC Service. Zetrix issuer of all Agent Certs and Service Certs; also creates VPs for the agent. Does not verify VPs. |
 | Zetrix Issuer Platform | Zetrix's issuer portal where VC templates are set up and where Zetrix revokes an Agent Cert when needed. |
-| SSIVC | The VC issuer backend (myid backend). Runs the owner session with ZVG, asks MBI to issue the Verified Agent Cert, and issues / revokes Service Certs for the Admin Portal. |
+| SSIVC | The VC issuer backend (myid backend). Runs the owner session with ZVG, asks MBI to issue the Verified Agent Cert, and issues / revokes Service Certs for the Zetrix Registry Admin. |
 | ZVG | Zetrix Verification Gateway. Identity provider only: checks the human owner (Phase 1: MyDigital ID). |
-| Admin Portal | Web portal where registry controllers onboard and manage services and Zetrix oversees them. |
-| Registry controller (client) | An organisation that onboards services into the Zetrix registry and takes responsibility for them. Pilot: telcos. |
+| Zetrix Registry Admin | Web portal where registry controllers onboard and manage services and Zetrix oversees them. |
+| Registry controller (client) | An organisation appointed by Zetrix that onboards services into the Zetrix registry and takes responsibility for them. |
 | OpenAgenet (OAN) | Agent and service discovery network owned by CAICT. Zetrix runs its own registry, mirrored on OpenAgenet. |
 | CAICT | China Academy of Information and Communications Technology. Partner; owns OpenAgenet. |
 | Proof request | A short-lived, single-use request from AVG telling the agent which credential and claims to show, with a one-time nonce to sign. |
@@ -28,5 +28,5 @@
 | Service DID vs Service Cert | Service DID (did:zid) is the service identity. Service Cert is a VC showing it was approved by a registry controller. |
 | Required credential | Which Agent Cert a service accepts: Basic only, Verified only, or Basic or Verified. Set at onboarding. |
 | Assurance level | How strong the owner identity check was. Set by Zetrix per identity source. MyDigital ID = HIGH. |
-| Client Admin / Maker / Checker / Viewer | Registry controller roles in the Admin Portal. |
-| Zetrix Super Admin / Zetrix Ops | Zetrix roles in the Admin Portal. |
+| Client Admin / Maker / Checker / Viewer | Registry controller roles in the Zetrix Registry Admin. |
+| Zetrix Super Admin / Zetrix Ops | Zetrix roles in the Zetrix Registry Admin. |

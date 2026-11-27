@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Service Onboarding Application
 
 The intake step for any website, agent, API or MCP server that wants to check agent identity through AVG. The application captures who runs the service, where it lives, and what identity proof it will ask agents for. A **Maker** or **Client Admin** submits it.
