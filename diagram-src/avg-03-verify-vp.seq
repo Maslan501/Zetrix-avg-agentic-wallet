@@ -1,4 +1,6 @@
 title AVG-03 AVG Verifies VP (OID4VP) and Delivers Signed Result
+fontsize 20
+gap 205
 participant Calling_Agent
 participant MBI
 participant AVG

@@ -1,72 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1304" height="1600" viewBox="0 0 1304 1600" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1374" height="2831" viewBox="0 0 1374 2831" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
 <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1f2937"/></marker></defs>
 <rect width="100%" height="100%" fill="#ffffff"/>
-<line x1="98.85" y1="114" x2="98.85" y2="1532" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/><line x1="328.95000000000005" y1="114" x2="328.95000000000005" y2="1532" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/><line x1="559.0500000000001" y1="114" x2="559.0500000000001" y2="1532" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/><line x1="789.1500000000001" y1="114" x2="789.1500000000001" y2="1532" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/><line x1="1019.2500000000001" y1="114" x2="1019.2500000000001" y2="1532" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/>
-<rect x="26" y="1410" width="1252" height="98" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
-<rect x="26" y="1311" width="1252" height="79" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
-<rect x="26" y="1212" width="1252" height="79" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
-<rect x="26" y="1031" width="1252" height="161" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
-<line x1="20" y1="150" x2="1284" y2="150" stroke="#4f46e5" stroke-width="1.2" stroke-dasharray="2 3"/><rect x="589.9" y="137" width="124.2" height="26" rx="13" fill="#4f46e5"/><text x="652" y="155" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">STEPS 6 TO 7A</text>
-<text x="213.90000000000003" y="184" font-size="13" text-anchor="middle" fill="#1f2937">6. create VP (revealed</text>
-<text x="213.90000000000003" y="200" font-size="13" text-anchor="middle" fill="#1f2937">claims, signed over x401</text>
-<text x="213.90000000000003" y="216" font-size="13" text-anchor="middle" fill="#1f2937">challenge)</text>
-<line x1="98.85" y1="225" x2="325.95000000000005" y2="225" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
-<text x="213.90000000000003" y="257" font-size="13" text-anchor="middle" fill="#1f2937">VP</text>
-<line x1="328.95000000000005" y1="266" x2="101.85" y2="266" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
-<text x="328.95000000000005" y="298" font-size="13" text-anchor="middle" fill="#1f2937">7. submit VP (OID4VP, proofRequestId)</text>
-<line x1="98.85" y1="307" x2="556.0500000000001" y2="307" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
-<text x="597.0500000000001" y="343" font-size="13" fill="#1f2937">proof request exists, not expired,</text>
-<text x="597.0500000000001" y="359" font-size="13" fill="#1f2937">not used; mark used</text>
-<path d="M559.0500000000001 333 h28 v38 h-24" fill="none" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
-<text x="674.1000000000001" y="399" font-size="13" text-anchor="middle" fill="#1f2937">7a. read issuer key + VC</text>
-<text x="674.1000000000001" y="415" font-size="13" text-anchor="middle" fill="#1f2937">status</text>
-<line x1="559.0500000000001" y1="424" x2="786.1500000000001" y2="424" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
-<text x="674.1000000000001" y="456" font-size="13" text-anchor="middle" fill="#1f2937">issuer key, status</text>
-<line x1="789.1500000000001" y1="465" x2="562.0500000000001" y2="465" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
-<text x="597.0500000000001" y="501" font-size="13" fill="#1f2937">check in order: (1) challenge +</text>
-<text x="597.0500000000001" y="517" font-size="13" fill="#1f2937">signature (2) Zetrix issuer from AVG</text>
-<text x="597.0500000000001" y="533" font-size="13" fill="#1f2937">config (3) not revoked (4) not</text>
-<text x="597.0500000000001" y="549" font-size="13" fill="#1f2937">expired (5) credential type (6)</text>
-<text x="597.0500000000001" y="565" font-size="13" fill="#1f2937">requested claims present</text>
-<path d="M559.0500000000001 491 h28 v86 h-24" fill="none" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
-<line x1="20" y1="615" x2="1284" y2="615" stroke="#4f46e5" stroke-width="1.2" stroke-dasharray="2 3"/><rect x="586.2" y="602" width="131.60000000000002" height="26" rx="13" fill="#4f46e5"/><text x="652" y="620" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">STEPS 8A TO 8C</text>
-<text x="597.0500000000001" y="653" font-size="13" fill="#1f2937">sign result with service HMAC</text>
-<text x="597.0500000000001" y="669" font-size="13" fill="#1f2937">secret; log attempt (no claim</text>
-<text x="597.0500000000001" y="685" font-size="13" fill="#1f2937">values, 30 days)</text>
-<path d="M559.0500000000001 643 h28 v54 h-24" fill="none" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
-<text x="328.95000000000005" y="725" font-size="13" text-anchor="middle" fill="#1f2937">8a. signed result (true + disclosed claims)</text>
-<line x1="559.0500000000001" y1="734" x2="101.85" y2="734" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
-<text x="559.0500000000001" y="766" font-size="13" text-anchor="middle" fill="#1f2937">8b. forward signed result in PROOF-RESPONSE header</text>
-<line x1="98.85" y1="775" x2="1016.2500000000001" y2="775" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
-<text x="1057.25" y="811" font-size="13" fill="#1f2937">recompute HMAC with own secret;</text>
-<text x="1057.25" y="827" font-size="13" fill="#1f2937">match proofRequestId</text>
-<path d="M1019.2500000000001 801 h28 v38 h-24" fill="none" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
-<text x="559.0500000000001" y="867" font-size="13" text-anchor="middle" fill="#1f2937">serve the call</text>
-<line x1="1019.2500000000001" y1="876" x2="101.85" y2="876" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
-<text x="789.1500000000001" y="908" font-size="13" text-anchor="middle" fill="#1f2937">8c. POST same signed result to callback URL (always)</text>
-<line x1="559.0500000000001" y1="917" x2="1016.2500000000001" y2="917" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
-<text x="1057.25" y="953" font-size="13" fill="#1f2937">check HMAC; treat header + callback</text>
-<text x="1057.25" y="969" font-size="13" fill="#1f2937">for same proofRequestId as one</text>
-<text x="1057.25" y="985" font-size="13" fill="#1f2937">result</text>
-<path d="M1019.2500000000001 943 h28 v54 h-24" fill="none" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
-<text x="328.95000000000005" y="1065" font-size="13" text-anchor="middle" fill="#1f2937">8a. signed result (false + reason code)</text>
-<line x1="559.0500000000001" y1="1074" x2="101.85" y2="1074" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
-<text x="559.0500000000001" y="1106" font-size="13" text-anchor="middle" fill="#1f2937">8b. forward</text>
-<line x1="98.85" y1="1115" x2="1016.2500000000001" y2="1115" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
-<text x="559.0500000000001" y="1147" font-size="13" text-anchor="middle" fill="#1f2937">refuse, with reason</text>
-<line x1="1019.2500000000001" y1="1156" x2="101.85" y2="1156" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
-<path d="M26 1031 h44 v14 l-8 8 h-36 z" fill="#94a3b8"/><text x="34" y="1047" font-size="12" font-weight="700" fill="#ffffff">alt</text><text x="80" y="1047" font-size="12" font-weight="700" fill="#1f2937">[ANY CHECK FAILS]</text>
-<text x="559.0500000000001" y="1246" font-size="13" text-anchor="middle" fill="#1f2937">refuse (HMAC_MISMATCH)</text>
-<line x1="1019.2500000000001" y1="1255" x2="101.85" y2="1255" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
-<path d="M26 1212 h44 v14 l-8 8 h-36 z" fill="#94a3b8"/><text x="34" y="1228" font-size="12" font-weight="700" fill="#ffffff">alt</text><text x="80" y="1228" font-size="12" font-weight="700" fill="#1f2937">[RESULT TAMPERED]</text>
-<text x="328.95000000000005" y="1345" font-size="13" text-anchor="middle" fill="#1f2937">signed result (false, VERIFIER_UNAVAILABLE)</text>
-<line x1="559.0500000000001" y1="1354" x2="101.85" y2="1354" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ah)"/>
-<path d="M26 1311 h44 v14 l-8 8 h-36 z" fill="#94a3b8"/><text x="34" y="1327" font-size="12" font-weight="700" fill="#ffffff">alt</text><text x="80" y="1327" font-size="12" font-weight="700" fill="#1f2937">[ZETRIX CHAIN UNREADABLE (FAIL CLOSED)]</text>
-<text x="597.0500000000001" y="1448" font-size="13" fill="#1f2937">retry after 5 s, 30 s, 2 min, then</text>
-<text x="597.0500000000001" y="1464" font-size="13" fill="#1f2937">log CALLBACK_FAILED</text>
-<path d="M559.0500000000001 1438 h28 v38 h-24" fill="none" stroke="#1f2937" stroke-width="1.4" marker-end="url(#ah)"/>
-<path d="M26 1410 h44 v14 l-8 8 h-36 z" fill="#94a3b8"/><text x="34" y="1426" font-size="12" font-weight="700" fill="#ffffff">alt</text><text x="80" y="1426" font-size="12" font-weight="700" fill="#1f2937">[CALLBACK NOT ANSWERED (NO 2XX IN 5 S)]</text>
-<text x="40" y="44" font-size="18" font-weight="700" fill="#1f2937">AVG-03 AVG Verifies VP (OID4VP) and Delivers Signed Result</text>
-<rect x="39.99999999999999" y="76" width="117.7" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="98.85" y="100" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">Calling Agent</text><rect x="273.95000000000005" y="76" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="328.95000000000005" y="100" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">MBI</text><rect x="504.05000000000007" y="76" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="559.0500000000001" y="100" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">AVG</text><rect x="733.7500000000001" y="76" width="110.80000000000001" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="789.1500000000001" y="100" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">Zetrix Chain</text><rect x="964.2500000000001" y="76" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="1019.2500000000001" y="100" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">Service</text>
-<rect x="39.99999999999999" y="1532" width="117.7" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="98.85" y="1556" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">Calling Agent</text><rect x="273.95000000000005" y="1532" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="328.95000000000005" y="1556" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">MBI</text><rect x="504.05000000000007" y="1532" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="559.0500000000001" y="1556" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">AVG</text><rect x="733.7500000000001" y="1532" width="110.80000000000001" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="789.1500000000001" y="1556" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">Zetrix Chain</text><rect x="964.2500000000001" y="1532" width="110" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.4"/><text x="1019.2500000000001" y="1556" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2937">Service</text>
+<line x1="151.73076923076923" y1="175.38461538461542" x2="151.73076923076923" y2="2726.1538461538457" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/><line x1="356.7307692307692" y1="175.38461538461542" x2="356.7307692307692" y2="2726.1538461538457" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/><line x1="561.7307692307693" y1="175.38461538461542" x2="561.7307692307693" y2="2726.1538461538457" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/><line x1="766.7307692307693" y1="175.38461538461542" x2="766.7307692307693" y2="2726.1538461538457" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/><line x1="971.7307692307693" y1="175.38461538461542" x2="971.7307692307693" y2="2726.1538461538457" stroke="#64748b" stroke-width="1" stroke-dasharray="5 5"/>
+<rect x="26" y="2513.8461538461534" width="1322" height="175.3846153846157" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+<rect x="26" y="2336.9230769230767" width="1322" height="146.1538461538462" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+<rect x="26" y="2184.6153846153848" width="1322" height="121.53846153846143" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+<rect x="26" y="1881.5384615384621" width="1322" height="272.30769230769215" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+<line x1="20" y1="230.7692307692308" x2="1354" y2="230.7692307692308" stroke="#4f46e5" stroke-width="1.85" stroke-dasharray="2 3"/><rect x="591.4615384615385" y="210.7692307692308" width="191.0769230769231" height="40" rx="20" fill="#4f46e5"/><text x="687" y="238.46153846153848" font-size="18.461538461538463" font-weight="700" text-anchor="middle" fill="#ffffff">STEPS 6 TO 7A</text>
+<text x="254.23076923076923" y="283.0769230769231" font-size="20" text-anchor="middle" fill="#1f2937">6. create VP</text>
+<text x="254.23076923076923" y="307.69230769230774" font-size="20" text-anchor="middle" fill="#1f2937">(revealed</text>
+<text x="254.23076923076923" y="332.3076923076923" font-size="20" text-anchor="middle" fill="#1f2937">claims, signed</text>
+<text x="254.23076923076923" y="356.92307692307696" font-size="20" text-anchor="middle" fill="#1f2937">over x401</text>
+<text x="254.23076923076923" y="381.53846153846155" font-size="20" text-anchor="middle" fill="#1f2937">challenge)</text>
+<line x1="151.73076923076923" y1="395.3846153846154" x2="353.7307692307692" y2="395.3846153846154" stroke="#1f2937" stroke-width="2.15" marker-end="url(#ah)"/>
+<text x="254.23076923076923" y="444.61538461538464" font-size="20" text-anchor="middle" fill="#1f2937">VP</text>
+<line x1="356.7307692307692" y1="458.4615384615385" x2="154.73076923076923" y2="458.4615384615385" stroke="#1f2937" stroke-width="2.15" stroke-dasharray="9.230769230769232 6.153846153846154" marker-end="url(#ah)"/>
+<text x="356.7307692307693" y="507.69230769230774" font-size="20" text-anchor="middle" fill="#1f2937">7. submit VP (OID4VP,</text>
+<text x="356.7307692307693" y="532.3076923076924" font-size="20" text-anchor="middle" fill="#1f2937">proofRequestId)</text>
+<line x1="151.73076923076923" y1="546.1538461538462" x2="558.7307692307693" y2="546.1538461538462" stroke="#1f2937" stroke-width="2.15" marker-end="url(#ah)"/>
+<text x="620.1923076923077" y="601.5384615384617" font-size="20" fill="#1f2937">proof request exists,</text>
+<text x="620.1923076923077" y="626.1538461538463" font-size="20" fill="#1f2937">not expired, not used;</text>
+<text x="620.1923076923077" y="650.769230769231" font-size="20" fill="#1f2937">mark used</text>
+<path d="M561.7307692307693 586.1538461538462 h43.07692307692308 v83.07692307692308 h-36.92307692307693" fill="none" stroke="#1f2937" stroke-width="2.15" marker-end="url(#ah)"/>
+<text x="664.2307692307693" y="712.3076923076924" font-size="20" text-anchor="middle" fill="#1f2937">7a. read issuer</text>
+<text x="664.2307692307693" y="736.923076923077" font-size="20" text-anchor="middle" fill="#1f2937">key + VC status</text>
+<line x1="561.7307692307693" y1="750.7692307692308" x2="763.7307692307693" y2="750.7692307692308" stroke="#1f2937" stroke-width="2.15" marker-end="url(#ah)"/>
+<text x="664.2307692307693" y="800.0000000000001" font-size="20" text-anchor="middle" fill="#1f2937">issuer key,</text>
+<text x="664.2307692307693" y="824.6153846153848" font-size="20" text-anchor="middle" fill="#1f2937">status</text>
+<line x1="766.7307692307693" y1="838.4615384615386" x2="564.7307692307693" y2="838.4615384615386" stroke="#1f2937" stroke-width="2.15" stroke-dasharray="9.230769230769232 6.153846153846154" marker-end="url(#ah)"/>
+<text x="620.1923076923077" y="893.846153846154" font-size="20" fill="#1f2937">check in order: (1)</text>
+<text x="620.1923076923077" y="918.4615384615387" font-size="20" fill="#1f2937">challenge + signature</text>
+<text x="620.1923076923077" y="943.0769230769233" font-size="20" fill="#1f2937">(2) Zetrix issuer from</text>
+<text x="620.1923076923077" y="967.6923076923078" font-size="20" fill="#1f2937">AVG config (3) not</text>
+<text x="620.1923076923077" y="992.3076923076925" font-size="20" fill="#1f2937">revoked (4) not expired</text>
+<text x="620.1923076923077" y="1016.9230769230771" font-size="20" fill="#1f2937">(5) credential type (6)</text>
+<text x="620.1923076923077" y="1041.5384615384617" font-size="20" fill="#1f2937">requested claims present</text>
+<path d="M561.7307692307693 878.4615384615386 h43.07692307692308 v181.53846153846155 h-36.92307692307693" fill="none" stroke="#1f2937" stroke-width="2.15" marker-end="url(#ah)"/>
+<line x1="20" y1="1118.4615384615388" x2="1354" y2="1118.4615384615388" stroke="#4f46e5" stroke-width="1.85" stroke-dasharray="2 3"/><rect x="585.7692307692307" y="1098.4615384615388" width="202.4615384615385" height="40" rx="20" fill="#4f46e5"/><text x="687" y="1126.1538461538464" font-size="18.461538461538463" font-weight="700" text-anchor="middle" fill="#ffffff">STEPS 8A TO 8C</text>
+<text x="620.1923076923077" y="1176.9230769230774" font-size="20" fill="#1f2937">sign result with service</text>
+<text x="620.1923076923077" y="1201.538461538462" font-size="20" fill="#1f2937">HMAC secret; log attempt</text>
+<text x="620.1923076923077" y="1226.1538461538466" font-size="20" fill="#1f2937">(no claim values, 30</text>
+<text x="620.1923076923077" y="1250.7692307692312" font-size="20" fill="#1f2937">days)</text>
+<path d="M561.7307692307693 1161.538461538462 h43.07692307692308 v107.6923076923077 h-36.92307692307693" fill="none" stroke="#1f2937" stroke-width="2.15" marker-end="url(#ah)"/>
+<text x="356.7307692307693" y="1312.3076923076928" font-size="20" text-anchor="middle" fill="#1f2937">8a. signed result (true + disclosed</text>
+<text x="356.7307692307693" y="1336.9230769230774" font-size="20" text-anchor="middle" fill="#1f2937">claims)</text>
+<line x1="561.7307692307693" y1="1350.7692307692312" x2="154.73076923076923" y2="1350.7692307692312" stroke="#1f2937" stroke-width="2.15" stroke-dasharray="9.230769230769232 6.153846153846154" marker-end="url(#ah)"/>
+<text x="561.7307692307693" y="1400.0000000000005" font-size="20" text-anchor="middle" fill="#1f2937">8b. forward signed result in PROOF-RESPONSE header</text>
+<line x1="151.73076923076923" y1="1413.8461538461543" x2="968.7307692307693" y2="1413.8461538461543" stroke="#1f2937" stroke-width="2.15" marker-end="url(#ah)"/>
+<text x="1030.1923076923078" y="1469.2307692307697" font-size="20" fill="#1f2937">recompute HMAC with own</text>
+<text x="1030.1923076923078" y="1493.8461538461543" font-size="20" fill="#1f2937">secret; match</text>
+<text x="1030.1923076923078" y="1518.461538461539" font-size="20" fill="#1f2937">proofRequestId</text>
+<path d="M971.7307692307693 1453.8461538461543 h43.07692307692308 v83.07692307692308 h-36.92307692307693" fill="none" stroke="#1f2937" stroke-width="2.15" marker-end="url(#ah)"/>
+<text x="561.7307692307693" y="1580.0000000000005" font-size="20" text-anchor="middle" fill="#1f2937">serve the call</text>
+<line x1="971.7307692307693" y1="1593.8461538461543" x2="154.73076923076923" y2="1593.8461538461543" stroke="#1f2937" stroke-width="2.15" stroke-dasharray="9.230769230769232 6.153846153846154" marker-end="url(#ah)"/>
+<text x="766.7307692307693" y="1643.0769230769235" font-size="20" text-anchor="middle" fill="#1f2937">8c. POST same signed result to</text>
+<text x="766.7307692307693" y="1667.692307692308" font-size="20" text-anchor="middle" fill="#1f2937">callback URL (always)</text>
+<line x1="561.7307692307693" y1="1681.538461538462" x2="968.7307692307693" y2="1681.538461538462" stroke="#1f2937" stroke-width="2.15" stroke-dasharray="9.230769230769232 6.153846153846154" marker-end="url(#ah)"/>
+<text x="1030.1923076923078" y="1736.9230769230774" font-size="20" fill="#1f2937">check HMAC; treat header</text>
+<text x="1030.1923076923078" y="1761.538461538462" font-size="20" fill="#1f2937">+ callback for same</text>
+<text x="1030.1923076923078" y="1786.1538461538466" font-size="20" fill="#1f2937">proofRequestId as one</text>
+<text x="1030.1923076923078" y="1810.7692307692312" font-size="20" fill="#1f2937">result</text>
+<path d="M971.7307692307693 1721.538461538462 h43.07692307692308 v107.6923076923077 h-36.92307692307693" fill="none" stroke="#1f2937" stroke-width="2.15" marker-end="url(#ah)"/>
+<text x="356.7307692307693" y="1933.8461538461545" font-size="20" text-anchor="middle" fill="#1f2937">8a. signed result (false + reason</text>
+<text x="356.7307692307693" y="1958.461538461539" font-size="20" text-anchor="middle" fill="#1f2937">code)</text>
+<line x1="561.7307692307693" y1="1972.3076923076928" x2="154.73076923076923" y2="1972.3076923076928" stroke="#1f2937" stroke-width="2.15" stroke-dasharray="9.230769230769232 6.153846153846154" marker-end="url(#ah)"/>
+<text x="561.7307692307693" y="2021.5384615384621" font-size="20" text-anchor="middle" fill="#1f2937">8b. forward</text>
+<line x1="151.73076923076923" y1="2035.384615384616" x2="968.7307692307693" y2="2035.384615384616" stroke="#1f2937" stroke-width="2.15" marker-end="url(#ah)"/>
+<text x="561.7307692307693" y="2084.615384615385" font-size="20" text-anchor="middle" fill="#1f2937">refuse, with reason</text>
+<line x1="971.7307692307693" y1="2098.461538461539" x2="154.73076923076923" y2="2098.461538461539" stroke="#1f2937" stroke-width="2.15" stroke-dasharray="9.230769230769232 6.153846153846154" marker-end="url(#ah)"/>
+<path d="M26 1881.5384615384621 h67.6923076923077 v21.53846153846154 l-12.307692307692308 12.307692307692308 h-55.38461538461539 z" fill="#94a3b8"/><text x="38.30769230769231" y="1906.1538461538466" font-size="18.461538461538463" font-weight="700" fill="#ffffff">alt</text><text x="109.07692307692308" y="1906.1538461538466" font-size="18.461538461538463" font-weight="700" fill="#1f2937">[ANY CHECK FAILS]</text>
+<text x="561.7307692307693" y="2236.923076923077" font-size="20" text-anchor="middle" fill="#1f2937">refuse (HMAC_MISMATCH)</text>
+<line x1="971.7307692307693" y1="2250.769230769231" x2="154.73076923076923" y2="2250.769230769231" stroke="#1f2937" stroke-width="2.15" stroke-dasharray="9.230769230769232 6.153846153846154" marker-end="url(#ah)"/>
+<path d="M26 2184.6153846153848 h67.6923076923077 v21.53846153846154 l-12.307692307692308 12.307692307692308 h-55.38461538461539 z" fill="#94a3b8"/><text x="38.30769230769231" y="2209.2307692307695" font-size="18.461538461538463" font-weight="700" fill="#ffffff">alt</text><text x="109.07692307692308" y="2209.2307692307695" font-size="18.461538461538463" font-weight="700" fill="#1f2937">[RESULT TAMPERED]</text>
+<text x="356.7307692307693" y="2389.230769230769" font-size="20" text-anchor="middle" fill="#1f2937">signed result (false,</text>
+<text x="356.7307692307693" y="2413.846153846154" font-size="20" text-anchor="middle" fill="#1f2937">VERIFIER_UNAVAILABLE)</text>
+<line x1="561.7307692307693" y1="2427.6923076923076" x2="154.73076923076923" y2="2427.6923076923076" stroke="#1f2937" stroke-width="2.15" stroke-dasharray="9.230769230769232 6.153846153846154" marker-end="url(#ah)"/>
+<path d="M26 2336.9230769230767 h67.6923076923077 v21.53846153846154 l-12.307692307692308 12.307692307692308 h-55.38461538461539 z" fill="#94a3b8"/><text x="38.30769230769231" y="2361.5384615384614" font-size="18.461538461538463" font-weight="700" fill="#ffffff">alt</text><text x="109.07692307692308" y="2361.5384615384614" font-size="18.461538461538463" font-weight="700" fill="#1f2937">[ZETRIX CHAIN UNREADABLE (FAIL CLOSED)]</text>
+<text x="620.1923076923077" y="2572.307692307692" font-size="20" fill="#1f2937">retry after 5 s, 30 s, 2</text>
+<text x="620.1923076923077" y="2596.9230769230767" font-size="20" fill="#1f2937">min, then log</text>
+<text x="620.1923076923077" y="2621.538461538461" font-size="20" fill="#1f2937">CALLBACK_FAILED</text>
+<path d="M561.7307692307693 2556.9230769230767 h43.07692307692308 v83.07692307692308 h-36.92307692307693" fill="none" stroke="#1f2937" stroke-width="2.15" marker-end="url(#ah)"/>
+<path d="M26 2513.8461538461534 h67.6923076923077 v21.53846153846154 l-12.307692307692308 12.307692307692308 h-55.38461538461539 z" fill="#94a3b8"/><text x="38.30769230769231" y="2538.461538461538" font-size="18.461538461538463" font-weight="700" fill="#ffffff">alt</text><text x="109.07692307692308" y="2538.461538461538" font-size="18.461538461538463" font-weight="700" fill="#1f2937">[CALLBACK NOT ANSWERED (NO 2XX IN 5 S)]</text>
+<text x="61.53846153846154" y="67.6923076923077" font-size="27.692307692307693" font-weight="700" fill="#1f2937">AVG-03 AVG Verifies VP (OID4VP) and Delivers Signed Result</text>
+<rect x="61.53846153846153" y="116.92307692307693" width="180.3846153846154" height="58.46153846153847" rx="9.230769230769232" fill="#eef2ff" stroke="#4f46e5" stroke-width="2.15"/><text x="151.73076923076923" y="153.84615384615387" font-size="20" font-weight="600" text-anchor="middle" fill="#1f2937">Calling Agent</text><rect x="272.11538461538464" y="116.92307692307693" width="169.23076923076923" height="58.46153846153847" rx="9.230769230769232" fill="#eef2ff" stroke="#4f46e5" stroke-width="2.15"/><text x="356.7307692307692" y="153.84615384615387" font-size="20" font-weight="600" text-anchor="middle" fill="#1f2937">MBI</text><rect x="477.11538461538464" y="116.92307692307693" width="169.23076923076923" height="58.46153846153847" rx="9.230769230769232" fill="#eef2ff" stroke="#4f46e5" stroke-width="2.15"/><text x="561.7307692307693" y="153.84615384615387" font-size="20" font-weight="600" text-anchor="middle" fill="#1f2937">AVG</text><rect x="681.5" y="116.92307692307693" width="170.46153846153848" height="58.46153846153847" rx="9.230769230769232" fill="#eef2ff" stroke="#4f46e5" stroke-width="2.15"/><text x="766.7307692307693" y="153.84615384615387" font-size="20" font-weight="600" text-anchor="middle" fill="#1f2937">Zetrix Chain</text><rect x="887.1153846153846" y="116.92307692307693" width="169.23076923076923" height="58.46153846153847" rx="9.230769230769232" fill="#eef2ff" stroke="#4f46e5" stroke-width="2.15"/><text x="971.7307692307693" y="153.84615384615387" font-size="20" font-weight="600" text-anchor="middle" fill="#1f2937">Service</text>
+<rect x="61.53846153846153" y="2726.1538461538457" width="180.3846153846154" height="58.46153846153847" rx="9.230769230769232" fill="#eef2ff" stroke="#4f46e5" stroke-width="2.15"/><text x="151.73076923076923" y="2763.076923076923" font-size="20" font-weight="600" text-anchor="middle" fill="#1f2937">Calling Agent</text><rect x="272.11538461538464" y="2726.1538461538457" width="169.23076923076923" height="58.46153846153847" rx="9.230769230769232" fill="#eef2ff" stroke="#4f46e5" stroke-width="2.15"/><text x="356.7307692307692" y="2763.076923076923" font-size="20" font-weight="600" text-anchor="middle" fill="#1f2937">MBI</text><rect x="477.11538461538464" y="2726.1538461538457" width="169.23076923076923" height="58.46153846153847" rx="9.230769230769232" fill="#eef2ff" stroke="#4f46e5" stroke-width="2.15"/><text x="561.7307692307693" y="2763.076923076923" font-size="20" font-weight="600" text-anchor="middle" fill="#1f2937">AVG</text><rect x="681.5" y="2726.1538461538457" width="170.46153846153848" height="58.46153846153847" rx="9.230769230769232" fill="#eef2ff" stroke="#4f46e5" stroke-width="2.15"/><text x="766.7307692307693" y="2763.076923076923" font-size="20" font-weight="600" text-anchor="middle" fill="#1f2937">Zetrix Chain</text><rect x="887.1153846153846" y="2726.1538461538457" width="169.23076923076923" height="58.46153846153847" rx="9.230769230769232" fill="#eef2ff" stroke="#4f46e5" stroke-width="2.15"/><text x="971.7307692307693" y="2763.076923076923" font-size="20" font-weight="600" text-anchor="middle" fill="#1f2937">Service</text>
 </svg>

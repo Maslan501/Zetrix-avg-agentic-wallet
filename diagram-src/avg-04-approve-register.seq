@@ -1,4 +1,6 @@
 title AVG-04 Approve Application and Register Service in AVG
+fontsize 20
+gap 180
 participant Checker_or_Client_Admin
 participant Admin_Portal_Backend
 participant DNS_Resolver

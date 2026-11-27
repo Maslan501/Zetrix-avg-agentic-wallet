@@ -1,4 +1,6 @@
 title AVG-07 Suspend, Reactivate or Delist a Service
+fontsize 20
+gap 200
 participant Checker_Client_Admin_or_Super_Admin
 participant Admin_Portal_Backend
 participant AVG
