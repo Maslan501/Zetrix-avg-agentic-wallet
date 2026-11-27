@@ -15,7 +15,6 @@
 | --- | --- |
 | SEC-01 | HTTPS only. TLS 1.3 preferred, TLS 1.2 permitted. |
 | SEC-02 | API keys and HMAC signing secrets are random, at least 256-bit, and shown once. API keys stored only as hashes. Signing secrets stored encrypted at rest with the encryption key in the Zetrix key store / HSM. Never written to logs. |
-| SEC-03 | Zetrix Registry Admin follows the High Risk controls of the MyEG Password & Authentication Control Matrix v0.9. |
 | SEC-04 | Role-based access and organisation scope enforced on the backend for every API call. |
 | SEC-05 | Applications approved by a different user from the one who created or last edited them. |
 | SEC-06 | Proof requests are single use, expire after 5 minutes, and use a nonce of at least 128 bits. Replayed or expired proof requests are rejected without calling MBI. |
