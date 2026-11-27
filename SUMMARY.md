@@ -1,6 +1,6 @@
 # Table of contents
 
-## Zetrix Agentic Wallet with Agent Verification Gateway (AVG)
+## Agent Verification Gateway (AVG)
 
 * [Overview](README.md)
 * [Getting Started](getting-started/README.md)
