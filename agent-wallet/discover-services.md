@@ -86,6 +86,7 @@ Agents need a trusted place to find services. Only services approved through the
 * Suspended and delisted services are never returned.
 * Search does not need an Agent Cert in Phase 1.
 * Target performance: P95 under 1 second.
+* The tool reads the Zetrix Registry Public API (`GET /v1/entries` and the agent card). See **Registry Public API** in [Registry and Service Cert](../registry/README.md).
 
 **Sequence Diagram**
 
