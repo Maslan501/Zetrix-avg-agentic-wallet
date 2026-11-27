@@ -43,6 +43,18 @@
 * [Registry and Service Cert](registry/README.md)
   * [Zetrix Registry and OpenAgenet Mirror](registry/zetrix-registry-and-openagenet.md)
   * [Service Cert](registry/service-cert.md)
+  * ```yaml
+    type: builtin:openapi
+    props:
+      models: true
+      downloadLink: true
+      grouping: by-tag
+    dependencies:
+      spec:
+        ref:
+          kind: openapi
+          spec: Zetrix-registry-public-api
+    ```
 * [AVG VC Templates](vc-templates.md)
 * [Reference](reference/README.md)
   * [Glossary](reference/glossary.md)
