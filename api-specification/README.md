@@ -14,7 +14,7 @@ AVG also calls the service: it posts every signed result to the service's regist
 | Environment | Base URL |
 | --- | --- |
 | Production | `https://avg.zetrix.com` |
-| UAT (development and testing) | `https://avg.myegdev.com` |
+| UAT (development and testing) | `https://avg.myegdev2.com` |
 
 In Phase 1, Zetrix hosts one AVG for every service. The AVG URL is also published on each service card in the Zetrix registry, and the agent wallet only submits proofs to that URL.
 
