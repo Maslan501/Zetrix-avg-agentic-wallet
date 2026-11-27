@@ -14,13 +14,13 @@ Zetrix is the controller of both DIDs. Their private keys are created and kept i
 | --- | --- |
 | [Zetrix Registry and OpenAgenet Mirror](zetrix-registry-and-openagenet.md) | How listings are created, hidden, shown, removed and mirrored. |
 | [Service Cert](service-cert.md) | How Service Certs are issued, renewed and revoked. |
-| **Agent endpoints** (Registry Public API) | API reference for searching the registry and reading agent cards, generated from the Zetrix Registry OpenAPI specification. |
+| **Agent Endpoints** (Registry Public API) | API reference for searching the registry and reading agent cards, generated from the Zetrix Registry OpenAPI specification. |
 
 ***
 
 ## **Registry Public API**
 
-Agents find services through the Zetrix Registry Public API. It is open: no API key and no login. The full reference, with schemas, code samples and **Test it**, is generated from the Zetrix Registry OpenAPI specification and listed under this section as **Agent endpoints**, with **Models** and **Download OpenAPI spec**.
+Agents find services through the Zetrix Registry Public API. It is open: no API key and no login. The full reference, with schemas, code samples and **Test it**, is generated from the Zetrix Registry OpenAPI specification and listed under this section as **Agent Endpoints**, with **Models** and **Download OpenAPI spec**.
 
 | Environment | Base URL |
 | --- | --- |
